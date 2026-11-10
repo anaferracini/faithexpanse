@@ -1,0 +1,29 @@
+FAITH EXPANSE — AMAXIA | SITE EDITÁVEL
+
+COMO VISUALIZAR
+1. Extraia a pasta faith_expanse_amaxia_editavel do arquivo ZIP.
+2. Abra o arquivo index.html no navegador (Chrome, Edge ou Firefox).
+3. O site funciona localmente; não precisa instalar programas.
+
+COMO EDITAR
+- Textos e letras: abra js/conteudo.js no Bloco de Notas, VS Code ou outro editor.
+  Cada faixa tem os campos number, title e lyric. Preserve as quebras de linha das letras.
+- Aparência, cores e fontes: edite css/style.css.
+- Estrutura da página: edite index.html.
+- Imagens do álbum: substitua os arquivos em assets mantendo os mesmos nomes, ou ajuste os caminhos no HTML.
+- Capa individual localizada: assets/capas-faixas/beijo-do-dragao.png.
+
+CONTEÚDO INCLUÍDO
+- Capa frontal e contracapa originais do álbum.
+- As sete faixas e suas letras recuperadas do pacote anterior, sem revisão editorial.
+- Uma capa individual localizada: Beijo do Dragão.
+- Para as outras seis faixas, há espaços numerados provisórios, sem imagens inventadas.
+
+O QUE AINDA DEPENDE DE CONFIRMAÇÃO/ENVIO
+- Capas individuais das outras seis músicas, caso queira exibi-las.
+- Arquivos de áudio ou links oficiais para ouvir as músicas.
+- Créditos definitivos, data de lançamento e links de plataformas.
+- Conta de hospedagem e eventual domínio próprio para publicar o site.
+
+IMPORTANTE
+O ZIP contém os arquivos editáveis do site, não um endereço publicado na internet.

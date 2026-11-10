@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#0b1020">
+<meta name="description" content="FAITH EXPANSE apresenta AMAXIA — Ana & Max. Duas histórias, um infinito de possibilidades.">
+<title>FAITH EXPANSE — AMAXIA</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header><div class="wrap"><nav>
+<a class="brand" href="#inicio">FAITH EXPANSE</a>
+<div class="links"><a href="#projeto">O projeto</a><a href="#album">AMAXIA</a><a href="#musicas">Músicas e letras</a><a href="#galeria">Galeria</a><a href="sobre.html">Sobre</a><a href="blog.html">Blog</a></div>
+</nav></div></header>
+<main>
+<section class="wrap hero" id="inicio" style="border:0">
+<div class="hero-copy">
+<div class="eyebrow">FAITH EXPANSE apresenta</div>
+<h1>AMAXIA</h1>
+<p class="tagline">Algumas histórias começam muito antes do encontro.</p>
+<p class="lead">Ana &amp; Max. Duas histórias, um infinito de possibilidades.</p>
+<p class="section-intro">Um álbum de sete canções reunidas em uma mesma jornada musical.</p>
+<a href="#musicas"><button type="button">Conheça as sete músicas</button></a>
+</div>
+<img class="cover" src="assets/capa-amaxia.jpg" alt="Capa original do álbum AMAXIA">
+</section>
+
+<section id="projeto"><div class="wrap about-grid">
+<div><div class="eyebrow">Sobre o projeto</div><h2>FAITH EXPANSE</h2>
+<p class="lead">Um projeto musical que explora histórias, sentimentos, fé e possibilidades criativas por meio da música.</p>
+<p>Este espaço apresenta o projeto e seu álbum AMAXIA. As informações de lançamento, créditos e plataformas serão acrescentadas quando forem confirmadas.</p></div>
+<div class="note"><div class="eyebrow">Uma ideia em expansão</div><h3>Histórias que se encontram</h3>
+<p>FAITH EXPANSE é o universo do projeto. AMAXIA é o álbum que reúne as sete faixas apresentadas nesta página.</p></div>
+</div></section>
+
+<section id="album"><div class="wrap about-grid">
+<div><div class="eyebrow">O álbum</div><h2>O significado de AMAXIA</h2>
+<p class="lead"><strong>AMA</strong> (Ana) + <strong>MAX</strong> (Max) + <strong>IA</strong> (inteligência artificial, imaginação e criação).</p>
+<p>O nome combina esses elementos em uma ideia de encontro e criação compartilhada: Ana &amp; Max. Duas histórias, um infinito de possibilidades.</p>
+<p class="tagline">Algumas histórias começam muito antes do encontro.</p></div>
+<img class="back-cover" src="assets/contracapa-amaxia.jpg" alt="Contracapa original do álbum AMAXIA">
+</div></section>
+
+<section id="musicas"><div class="wrap">
+<div class="eyebrow">Faixa a faixa</div><h2>As sete músicas</h2>
+<p class="section-intro">Selecione “Ver letra” para abrir a letra de cada faixa. Para editar títulos ou letras, abra o arquivo <strong>js/conteudo.js</strong> no editor de texto.</p>
+<div class="track-grid" id="trackGrid"></div>
+</div></section>
+
+<section id="galeria"><div class="wrap">
+<div class="eyebrow">Identidade visual</div><h2>Galeria do álbum</h2>
+<div class="gallery">
+<figure><img src="assets/capa-amaxia.jpg" alt="Capa frontal original de AMAXIA"><figcaption>Capa frontal do álbum AMAXIA</figcaption></figure>
+<figure><img src="assets/contracapa-amaxia.jpg" alt="Contracapa original de AMAXIA"><figcaption>Contracapa do álbum AMAXIA</figcaption></figure>
+</div>
+<p class="section-intro" style="margin-top:24px">A capa individual encontrada para “Beijo do Dragão” está associada à quarta faixa. As demais capas individuais não foram incluídas porque não foram localizadas nos arquivos disponíveis.</p>
+</div></section>
+</main>
+<footer><div class="wrap">FAITH EXPANSE · AMAXIA<br>Informações de lançamento, créditos e links de áudio serão adicionados após confirmação.</div></footer>
+<script src="js/conteudo.js"></script>
+<script>
+const grid=document.getElementById('trackGrid');
+(window.AMAXIA_TRACKS||[]).forEach((track,index)=>{
+ const card=document.createElement('article'); card.className='track';
+ const art=document.createElement(track.number===4?'img':'div');
+ if(track.number===4){art.src='assets/capas-faixas/beijo-do-dragao.png';art.alt='Capa individual de Beijo do Dragão'}
+ else {art.className='placeholder';art.textContent=String(track.number).padStart(2,'0')}
+ const info=document.createElement('div');
+ const small=document.createElement('small');small.textContent='FAIXA '+String(track.number).padStart(2,'0');
+ const title=document.createElement('h3');title.textContent=track.title;
+ const btn=document.createElement('button');btn.type='button';btn.textContent='Ver letra';
+ btn.addEventListener('click',()=>{card.classList.toggle('open');btn.textContent=card.classList.contains('open')?'Fechar letra':'Ver letra'});
+ info.append(small,title,btn);
+ const lyrics=document.createElement('div');lyrics.className='lyrics';lyrics.textContent=track.lyric||'Letra ainda não cadastrada.';
+ if(track.header){const h=document.createElement('p');h.className='lyrics-header';h.textContent=track.header;lyrics.prepend(h)}
+ card.append(art,info,lyrics);grid.append(card);
+});
+</script>
+</body></html>
