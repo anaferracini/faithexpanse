@@ -1,1 +1,343 @@
 
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#0b1020">
+<meta name="description" content="AMAXIA — Álbum musical do projeto FAITH EXPANSE.">
+<title>AMAXIA — FAITH EXPANSE</title>
+<link rel="stylesheet" href="css/style.css">
+
+<style>
+.album-hero {
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  align-items:center;
+  gap:45px;
+  padding:65px 0;
+}
+.album-cover {
+  width:100%;
+  max-width:420px;
+  display:block;
+  margin:auto;
+  box-shadow:0 24px 70px #0009;
+}
+.album-description { color:var(--muted); }
+.song-list {
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:14px;
+  margin-top:30px;
+}
+.song-button {
+  width:100%;
+  min-height:75px;
+  border:1px solid #ffffff25;
+  border-radius:9px;
+  padding:16px;
+  display:flex;
+  align-items:center;
+  gap:14px;
+  text-align:left;
+  color:var(--cream);
+  background:linear-gradient(145deg,#ffffff0d,#ffffff04);
+}
+.song-button:hover,
+.song-button.active {
+  border-color:var(--gold);
+  background:#ffffff12;
+}
+.song-number {
+  color:var(--rose);
+  font-family:Georgia,serif;
+  font-size:1.3rem;
+}
+.song-title {
+  font-family:Georgia,serif;
+  font-size:1.05rem;
+}
+.song-detail {
+  display:none;
+  margin-top:45px;
+  padding-top:35px;
+  border-top:1px solid #ffffff25;
+}
+.song-detail.visible { display:block; }
+.song-art {
+  width:100%;
+  max-width:560px;
+  height:auto;
+  display:block;
+  margin:0 auto 35px;
+  border:1px solid #ffffff25;
+  box-shadow:0 20px 55px #0009;
+}
+.song-lyrics {
+  max-width:760px;
+  margin:0 auto;
+  white-space:pre-wrap;
+  font-family:Georgia,serif;
+  line-height:1.9;
+  color:#e8e0dc;
+}
+.song-header {
+  color:var(--gold);
+  font-style:italic;
+  margin-bottom:20px;
+}
+.youtube-area {
+  max-width:760px;
+  margin:35px auto 0;
+  padding:22px;
+  border:1px solid #d9b87955;
+  border-radius:9px;
+  background:#ffffff08;
+}
+.youtube-area p { color:var(--muted); }
+.back-link {
+  display:inline-block;
+  margin-bottom:25px;
+  color:var(--gold);
+  cursor:pointer;
+}
+@media(max-width:760px) {
+  .album-hero { grid-template-columns:1fr; }
+  .song-list { grid-template-columns:1fr; }
+}
+</style>
+</head>
+
+<body>
+
+<div class="petals" aria-hidden="true"></div>
+
+<header>
+  <div class="wrap">
+    <nav>
+      <a class="brand" href="index.html">FAITH EXPANSE</a>
+      <div class="links">
+        <a href="index.html">Início</a>
+        <a href="amaxia.html" aria-current="page">AMAXIA</a>
+        <a href="blog.html">Blog</a>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+<section class="wrap album-hero">
+  <div>
+    <div class="eyebrow">FAITH EXPANSE apresenta</div>
+    <h1>AMAXIA</h1>
+    <p class="tagline">Algumas histórias começam muito antes do encontro.</p>
+    <p class="lead">
+      Ana &amp; Max. Duas histórias, um infinito de possibilidades.
+      Um álbum de sete canções reunidas em uma mesma jornada musical.
+    </p>
+  </div>
+
+  <div>
+    <img class="album-cover"
+         src="assets/capa-amaxia.jpg"
+         alt="Capa do álbum AMAXIA">
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="eyebrow">Sobre o álbum</div>
+    <h2>O que é AMAXIA?</h2>
+
+    <div class="about-grid">
+      <div>
+        <p class="lead">
+          AMAXIA reúne histórias, sentimentos e experiências transformados em música.
+        </p>
+        <p class="album-description">
+          AMA representa Ana, MAX representa Max, e IA reúne inteligência
+          artificial, imaginação e criação.
+        </p>
+      </div>
+
+      <img class="back-cover"
+           src="assets/contracapa-amaxia.jpg"
+           alt="Contracapa do álbum AMAXIA">
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="eyebrow">As sete canções</div>
+    <h2>Músicas e letras</h2>
+    <p class="section-intro">
+      Escolha uma música para conhecer sua capa e ler a letra.
+    </p>
+
+    <div class="song-list" id="songList"></div>
+
+    <article class="song-detail" id="songDetail">
+      <button class="back-link" id="backButton" type="button">
+        ← Voltar à lista de músicas
+      </button>
+
+      <h2 id="detailTitle"></h2>
+
+      <img class="song-art" id="detailImage" src="" alt="">
+
+      <div class="song-lyrics">
+        <p class="song-header" id="detailHeader"></p>
+        <div id="detailLyric"></div>
+      </div>
+
+      <div class="youtube-area">
+        <h3>Ouça a música</h3>
+        <p id="youtubeMessage">
+          O link do YouTube desta música será disponibilizado aqui.
+        </p>
+        <a id="youtubeLink" href="" target="_blank"
+           rel="noopener noreferrer" hidden>
+          Assistir no YouTube
+        </a>
+      </div>
+    </article>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    FAITH EXPANSE · AMAXIA
+  </div>
+</footer>
+
+<script src="js/conteudo.js"></script>
+
+<script>
+(function() {
+  const capas = [
+    'Do outro lado do rio.jpeg',
+    'a linguagem do meu coração.jpeg',
+    'confiança.jpeg',
+    'beijo do dragao.jpeg',
+    'impossivia.jpeg',
+    'escolhi amar.jpeg',
+    'menino confuso.jpeg'
+  ];
+
+  const lista = document.getElementById('songList');
+  const detalhe = document.getElementById('songDetail');
+  const titulo = document.getElementById('detailTitle');
+  const imagem = document.getElementById('detailImage');
+  const cabecalho = document.getElementById('detailHeader');
+  const letra = document.getElementById('detailLyric');
+  const mensagemYoutube = document.getElementById('youtubeMessage');
+  const linkYoutube = document.getElementById('youtubeLink');
+
+  const musicas = window.AMAXIA_TRACKS || [];
+
+  function abrirMusica(musica, indice) {
+    titulo.textContent = musica.title;
+    imagem.src = 'assets/capas-faixas/' +
+      encodeURIComponent(capas[indice]);
+    imagem.alt = 'Capa da música ' + musica.title;
+
+    cabecalho.textContent = musica.header || '';
+    letra.textContent = musica.lyric || '';
+
+    const urlYoutube = musica.youtube || '';
+
+    if (urlYoutube) {
+      linkYoutube.href = urlYoutube;
+      linkYoutube.hidden = false;
+      mensagemYoutube.textContent = 'Assista ou ouça esta música:';
+    } else {
+      linkYoutube.hidden = true;
+      mensagemYoutube.textContent =
+        'O link do YouTube desta música será disponibilizado aqui.';
+    }
+
+    detalhe.classList.add('visible');
+    lista.style.display = 'none';
+
+    document.querySelectorAll('.song-button').forEach(function(botao) {
+      botao.classList.remove('active');
+    });
+
+    const selecionado = document.querySelector(
+      '[data-song-index="' + indice + '"]'
+    );
+
+    if (selecionado) selecionado.classList.add('active');
+
+    detalhe.scrollIntoView({behavior:'smooth', block:'start'});
+  }
+
+  musicas.forEach(function(musica, indice) {
+    const botao = document.createElement('button');
+    botao.type = 'button';
+    botao.className = 'song-button';
+    botao.dataset.songIndex = indice;
+
+    const numero = document.createElement('span');
+    numero.className = 'song-number';
+    numero.textContent = musica.number;
+
+    const nome = document.createElement('span');
+    nome.className = 'song-title';
+    nome.textContent = musica.title;
+
+    botao.appendChild(numero);
+    botao.appendChild(nome);
+
+    botao.addEventListener('click', function() {
+      abrirMusica(musica, indice);
+    });
+
+    lista.appendChild(botao);
+  });
+
+  document.getElementById('backButton').addEventListener('click', function() {
+    detalhe.classList.remove('visible');
+    lista.style.display = 'grid';
+    lista.scrollIntoView({behavior:'smooth', block:'start'});
+  });
+
+})();
+</script>
+
+<script>
+(function(){
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
+  var box = document.querySelector('.petals');
+  var count = window.innerWidth < 700 ? 14 : 26;
+
+  for (var i = 0; i < count; i++) {
+    var p = document.createElement('span');
+    p.className = 'petal';
+    var size = 8 + Math.random() * 10;
+
+    p.style.left = (Math.random() * 100) + 'vw';
+    p.style.width = size + 'px';
+    p.style.height = (size * 0.8) + 'px';
+    p.style.animationDuration =
+      (12 + Math.random() * 14) + 's, ' +
+      (3 + Math.random() * 4) + 's';
+    p.style.animationDelay =
+      (-Math.random() * 26) + 's, ' +
+      (-Math.random() * 4) + 's';
+    p.style.opacity = (0.35 + Math.random() * 0.5).toFixed(2);
+
+    box.appendChild(p);
+  }
+})();
+</script>
+
+</body>
+</html>
+
