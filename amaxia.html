@@ -8,7 +8,6 @@
 <meta name="description" content="AMAXIA — Álbum musical do projeto FAITH EXPANSE.">
 <title>AMAXIA — FAITH EXPANSE</title>
 <link rel="stylesheet" href="css/style.css">
-
 <style>
 .album-hero {
   display:grid;
@@ -17,20 +16,34 @@
   gap:45px;
   padding:65px 0;
 }
-.album-cover {
+
+.brand-logos {
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  align-items:center;
+  justify-items:center;
+  gap:20px;
   width:100%;
-  max-width:420px;
-  display:block;
-  margin:auto;
-  box-shadow:0 24px 70px #0009;
 }
+
+.brand-logos img {
+  display:block;
+  width:100%;
+  max-width:230px;
+  height:220px;
+  object-fit:contain;
+  margin:auto;
+}
+
 .album-description { color:var(--muted); }
+
 .song-list {
   display:grid;
   grid-template-columns:repeat(2,1fr);
   gap:14px;
   margin-top:30px;
 }
+
 .song-button {
   width:100%;
   min-height:75px;
@@ -44,74 +57,85 @@
   color:var(--cream);
   background:linear-gradient(145deg,#ffffff0d,#ffffff04);
 }
+
 .song-button:hover,
 .song-button.active {
   border-color:var(--gold);
   background:#ffffff12;
 }
+
 .song-number {
   color:var(--rose);
   font-family:Georgia,serif;
   font-size:1.3rem;
 }
+
 .song-title {
   font-family:Georgia,serif;
   font-size:1.05rem;
 }
+
 .song-detail {
   display:none;
   margin-top:45px;
   padding-top:35px;
   border-top:1px solid #ffffff25;
 }
+
 .song-detail.visible { display:block; }
+
 .song-art {
   width:100%;
   max-width:560px;
   height:auto;
   display:block;
-  margin:0 auto 20px;
+  margin:0 auto 35px;
   border:1px solid #ffffff25;
   box-shadow:0 20px 55px #0009;
 }
+
 .song-lyrics {
   max-width:760px;
-  margin:35px auto 0;
+  margin:0 auto;
   white-space:pre-wrap;
   font-family:Georgia,serif;
   line-height:1.9;
   color:#e8e0dc;
 }
+
 .song-header {
   color:var(--gold);
   font-style:italic;
   margin-bottom:20px;
 }
+
 .youtube-area {
   max-width:760px;
-  margin:0 auto;
+  margin:35px auto 0;
   padding:22px;
   border:1px solid #d9b87955;
   border-radius:9px;
   background:#ffffff08;
-  text-align:center;
 }
+
 .youtube-area p { color:var(--muted); }
-.youtube-area a {
-  display:inline-block;
-  margin-top:10px;
-  color:var(--gold);
-  text-decoration:underline;
-}
+
 .back-link {
   display:inline-block;
   margin-bottom:25px;
   color:var(--gold);
   cursor:pointer;
 }
+
 @media(max-width:760px) {
   .album-hero { grid-template-columns:1fr; }
   .song-list { grid-template-columns:1fr; }
+  .brand-logos img { height:160px; }
+}
+
+@media(max-width:420px) {
+  .brand-logos { gap:10px; }
+  .brand-logos img { height:130px; }
 }
 </style>
 </head>
@@ -146,10 +170,14 @@
     </p>
   </div>
 
-  <div>
-    <img class="album-cover"
-         src="assets/capa-amaxia.jpg"
-         alt="Capa do álbum AMAXIA">
+  <div class="brand-logos">
+    <img
+      src="logo%20(Faith%20Expanse).png"
+      alt="Logo FAITH EXPANSE">
+
+    <img
+      src="logo%20(amaxia).jpeg"
+      alt="Logo AMAXIA">
   </div>
 </section>
 
@@ -195,7 +223,10 @@
 
       <img class="song-art" id="detailImage" src="" alt="">
 
-      <!-- LINK DO YOUTUBE LOGO ABAIXO DA IMAGEM -->
+      <div class="song-lyrics">
+        <p class="song-header" id="detailHeader"></p>
+        <div id="detailLyric"></div>
+      </div>
 
       <div class="youtube-area">
         <h3>Ouça a música</h3>
@@ -206,13 +237,6 @@
            rel="noopener noreferrer" hidden>
           Assistir no YouTube
         </a>
-      </div>
-
-      <!-- LETRA DA MÚSICA -->
-
-      <div class="song-lyrics">
-        <p class="song-header" id="detailHeader"></p>
-        <div id="detailLyric"></div>
       </div>
     </article>
   </div>
@@ -248,7 +272,6 @@
   const letra = document.getElementById('detailLyric');
   const mensagemYoutube = document.getElementById('youtubeMessage');
   const linkYoutube = document.getElementById('youtubeLink');
-
   const musicas = window.AMAXIA_TRACKS || [];
 
   function abrirMusica(musica, indice) {
@@ -256,6 +279,7 @@
 
     imagem.src = 'assets/capas-faixas/' +
       encodeURIComponent(capas[indice]);
+
     imagem.alt = 'Capa da música ' + musica.title;
 
     cabecalho.textContent = musica.header || '';
@@ -332,17 +356,21 @@
   for (var i = 0; i < count; i++) {
     var p = document.createElement('span');
     p.className = 'petal';
+
     var size = 8 + Math.random() * 10;
 
     p.style.left = (Math.random() * 100) + 'vw';
     p.style.width = size + 'px';
     p.style.height = (size * 0.8) + 'px';
+
     p.style.animationDuration =
       (12 + Math.random() * 14) + 's, ' +
       (3 + Math.random() * 4) + 's';
+
     p.style.animationDelay =
       (-Math.random() * 26) + 's, ' +
       (-Math.random() * 4) + 's';
+
     p.style.opacity = (0.35 + Math.random() * 0.5).toFixed(2);
 
     box.appendChild(p);
@@ -352,3 +380,4 @@
 
 </body>
 </html>
+
