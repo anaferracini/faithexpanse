@@ -63,20 +63,55 @@
 <script src="js/conteudo.js"></script>
 <script>
 const grid=document.getElementById('trackGrid');
+
+const capas = {
+  1: 'Do outro lado do rio.jpeg',
+  2: 'a linguagem do meu coração.jpeg',
+  3: 'confiança.jpeg',
+  4: 'beijo do dragao.jpeg',
+  5: 'impossivia.jpeg',
+  6: 'escolhi amar.jpeg',
+  7: 'menino confuso.jpeg'
+};
+
 (window.AMAXIA_TRACKS||[]).forEach((track,index)=>{
- const card=document.createElement('article'); card.className='track';
- const art=document.createElement(track.number===4?'img':'div');
- if(track.number===4){art.src='assets/capas-faixas/beijo-do-dragao.png';art.alt='Capa individual de Beijo do Dragão'}
- else {art.className='placeholder';art.textContent=String(track.number).padStart(2,'0')}
+ const card=document.createElement('article');
+ card.className='track';
+
+ const art=document.createElement('img');
+ art.src='assets/capas-faixas/' + encodeURIComponent(capas[track.number] || '');
+ art.alt='Capa da música ' + track.title;
+
  const info=document.createElement('div');
- const small=document.createElement('small');small.textContent='FAIXA '+String(track.number).padStart(2,'0');
- const title=document.createElement('h3');title.textContent=track.title;
- const btn=document.createElement('button');btn.type='button';btn.textContent='Ver letra';
- btn.addEventListener('click',()=>{card.classList.toggle('open');btn.textContent=card.classList.contains('open')?'Fechar letra':'Ver letra'});
+ const small=document.createElement('small');
+ small.textContent='FAIXA '+String(track.number).padStart(2,'0');
+
+ const title=document.createElement('h3');
+ title.textContent=track.title;
+
+ const btn=document.createElement('button');
+ btn.type='button';
+ btn.textContent='Ver letra';
+ btn.addEventListener('click',()=>{
+   card.classList.toggle('open');
+   btn.textContent=card.classList.contains('open')?'Fechar letra':'Ver letra';
+ });
+
  info.append(small,title,btn);
- const lyrics=document.createElement('div');lyrics.className='lyrics';lyrics.textContent=track.lyric||'Letra ainda não cadastrada.';
- if(track.header){const h=document.createElement('p');h.className='lyrics-header';h.textContent=track.header;lyrics.prepend(h)}
- card.append(art,info,lyrics);grid.append(card);
+
+ const lyrics=document.createElement('div');
+ lyrics.className='lyrics';
+ lyrics.textContent=track.lyric||'Letra ainda não cadastrada.';
+
+ if(track.header){
+   const h=document.createElement('p');
+   h.className='lyrics-header';
+   h.textContent=track.header;
+   lyrics.prepend(h);
+ }
+
+ card.append(art,info,lyrics);
+ grid.append(card);
 });
 </script>
 
