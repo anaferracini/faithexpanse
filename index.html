@@ -1,8 +1,9 @@
-
+```html
 <!doctype html>
 <html lang="pt-BR">
 <head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="theme-color" content="#0b1020">
 <meta name="description" content="FAITH EXPANSE apresenta AMAXIA — Ana & Max. Duas histórias, um infinito de possibilidades.">
 <title>FAITH EXPANSE — AMAXIA</title>
@@ -15,6 +16,7 @@
 <a class="brand" href="#inicio">FAITH EXPANSE</a>
 <div class="links"><a href="#projeto">O projeto</a><a href="#album">AMAXIA</a><a href="#musicas">Músicas e letras</a><a href="#galeria">Galeria</a><a href="sobre.html">Sobre</a><a href="blog.html">Blog</a></div>
 </nav></div></header>
+
 <main>
 <section class="wrap hero" id="inicio" style="border:0">
 <div class="hero-copy">
@@ -56,74 +58,88 @@
 <figure><img src="assets/capa-amaxia.jpg" alt="Capa frontal original de AMAXIA"><figcaption>Capa frontal do álbum AMAXIA</figcaption></figure>
 <figure><img src="assets/contracapa-amaxia.jpg" alt="Contracapa original de AMAXIA"><figcaption>Contracapa do álbum AMAXIA</figcaption></figure>
 </div>
-<p class="section-intro" style="margin-top:24px">A capa individual encontrada para “Beijo do Dragão” está associada à quarta faixa. As demais capas individuais não foram incluídas porque não foram localizadas nos arquivos disponíveis.</p>
+<p class="section-intro" style="margin-top:24px">As sete capas individuais estão associadas às respectivas faixas.</p>
 </div></section>
 </main>
+
 <footer><div class="wrap">FAITH EXPANSE · AMAXIA<br>Informações de lançamento, créditos e links de áudio serão adicionados após confirmação.</div></footer>
 
-<script src="js/conteudo.js"></script>
+<script src="js/conteudo.js?v=20261113"></script>
+
 <script>
-const grid=document.getElementById('trackGrid');
+const grid = document.getElementById('trackGrid');
 
-const capas = {
-  "01": 'Do outro lado do rio.jpeg',
-  "02": 'a linguagem do meu coração.jpeg',
-  "03": 'confiança.jpeg',
-  "04": 'beijo do dragao.jpeg',
-  "05": 'impossivia.jpeg',
-  "06": 'escolhi amar.jpeg',
-  "07": 'menino confuso.jpeg'
-};
+/* Capas na mesma ordem das músicas em conteudo.js */
+const capas = [
+  'Do outro lado do rio.jpeg',
+  'a linguagem do meu coração.jpeg',
+  'confiança.jpeg',
+  'beijo do dragao.jpeg',
+  'impossivia.jpeg',
+  'escolhi amar.jpeg',
+  'menino confuso.jpeg'
+];
 
-(window.AMAXIA_TRACKS||[]).forEach((track,index)=>{
- const card=document.createElement('article');
- card.className='track';
+(window.AMAXIA_TRACKS || []).forEach((track, index) => {
+  const card = document.createElement('article');
+  card.className = 'track';
 
- const art=document.createElement('img');
- art.src='assets/capas-faixas/' + encodeURIComponent(capas[track.number] || '');
- art.alt='Capa da música ' + track.title;
+  const art = document.createElement('img');
+  art.src = './assets/capas-faixas/' + capas[index] + '?v=20261113';
+  art.alt = 'Capa da música ' + track.title;
+  art.loading = 'lazy';
 
- const info=document.createElement('div');
- const small=document.createElement('small');
- small.textContent='FAIXA '+String(track.number).padStart(2,'0');
+  art.onerror = function() {
+    this.style.display = 'none';
+    console.error('Não foi possível carregar a capa:', this.src);
+  };
 
- const title=document.createElement('h3');
- title.textContent=track.title;
+  const info = document.createElement('div');
 
- const btn=document.createElement('button');
- btn.type='button';
- btn.textContent='Ver letra';
- btn.addEventListener('click',()=>{
-   card.classList.toggle('open');
-   btn.textContent=card.classList.contains('open')?'Fechar letra':'Ver letra';
- });
+  const small = document.createElement('small');
+  small.textContent = 'FAIXA ' + String(track.number).padStart(2, '0');
 
- info.append(small,title,btn);
+  const title = document.createElement('h3');
+  title.textContent = track.title;
 
- const lyrics=document.createElement('div');
- lyrics.className='lyrics';
- lyrics.textContent=track.lyric||'Letra ainda não cadastrada.';
+  const btn = document.createElement('button');
+  btn.type = 'button';
+  btn.textContent = 'Ver letra';
 
- if(track.header){
-   const h=document.createElement('p');
-   h.className='lyrics-header';
-   h.textContent=track.header;
-   lyrics.prepend(h);
- }
+  btn.addEventListener('click', () => {
+    card.classList.toggle('open');
+    btn.textContent = card.classList.contains('open') ? 'Fechar letra' : 'Ver letra';
+  });
 
- card.append(art,info,lyrics);
- grid.append(card);
+  info.append(small, title, btn);
+
+  const lyrics = document.createElement('div');
+  lyrics.className = 'lyrics';
+  lyrics.textContent = track.lyric || 'Letra ainda não cadastrada.';
+
+  if (track.header) {
+    const h = document.createElement('p');
+    h.className = 'lyrics-header';
+    h.textContent = track.header;
+    lyrics.prepend(h);
+  }
+
+  card.append(art, info, lyrics);
+  grid.append(card);
 });
 </script>
 
 <script>
 (function(){
   if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
   var box = document.querySelector('.petals');
   var count = window.innerWidth < 700 ? 14 : 26;
+
   for (var i = 0; i < count; i++) {
     var p = document.createElement('span');
     p.className = 'petal';
+
     var size = 8 + Math.random() * 10;
     p.style.left = (Math.random() * 100) + 'vw';
     p.style.width = size + 'px';
@@ -131,8 +147,12 @@ const capas = {
     p.style.animationDuration = (12 + Math.random() * 14) + 's, ' + (3 + Math.random() * 4) + 's';
     p.style.animationDelay = (-Math.random() * 26) + 's, ' + (-Math.random() * 4) + 's';
     p.style.opacity = (0.35 + Math.random() * 0.5).toFixed(2);
+
     box.appendChild(p);
   }
 })();
 </script>
-</body></html>
+
+</body>
+</html>
+```
