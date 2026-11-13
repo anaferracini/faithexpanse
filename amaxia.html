@@ -9,6 +9,13 @@
 <title>AMAXIA — FAITH EXPANSE</title>
 <link rel="stylesheet" href="css/style.css">
 <style>
+.site-logo {
+  display:block;
+  width:150px;
+  max-width:38vw;
+  height:auto;
+  object-fit:contain;
+}
 .album-hero {
   display:grid;
   grid-template-columns:1fr 1fr;
@@ -16,34 +23,21 @@
   gap:45px;
   padding:65px 0;
 }
-
-.brand-logos {
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  align-items:center;
-  justify-items:center;
-  gap:20px;
+.album-cover {
   width:100%;
-}
-
-.brand-logos img {
+  max-width:420px;
   display:block;
-  width:100%;
-  max-width:230px;
-  height:220px;
-  object-fit:contain;
   margin:auto;
+  object-fit:contain;
+  box-shadow:0 24px 70px #0009;
 }
-
 .album-description { color:var(--muted); }
-
 .song-list {
   display:grid;
   grid-template-columns:repeat(2,1fr);
   gap:14px;
   margin-top:30px;
 }
-
 .song-button {
   width:100%;
   min-height:75px;
@@ -57,89 +51,77 @@
   color:var(--cream);
   background:linear-gradient(145deg,#ffffff0d,#ffffff04);
 }
-
 .song-button:hover,
 .song-button.active {
   border-color:var(--gold);
   background:#ffffff12;
 }
-
 .song-number {
   color:var(--rose);
   font-family:Georgia,serif;
   font-size:1.3rem;
 }
-
 .song-title {
   font-family:Georgia,serif;
   font-size:1.05rem;
 }
-
 .song-detail {
   display:none;
   margin-top:45px;
   padding-top:35px;
   border-top:1px solid #ffffff25;
 }
-
 .song-detail.visible { display:block; }
-
 .song-art {
   width:100%;
   max-width:560px;
   height:auto;
   display:block;
-  margin:0 auto 35px;
+  margin:0 auto 20px;
   border:1px solid #ffffff25;
   box-shadow:0 20px 55px #0009;
 }
-
 .song-lyrics {
   max-width:760px;
-  margin:0 auto;
+  margin:35px auto 0;
   white-space:pre-wrap;
   font-family:Georgia,serif;
   line-height:1.9;
   color:#e8e0dc;
 }
-
 .song-header {
   color:var(--gold);
   font-style:italic;
   margin-bottom:20px;
 }
-
 .youtube-area {
   max-width:760px;
-  margin:35px auto 0;
+  margin:0 auto;
   padding:22px;
   border:1px solid #d9b87955;
   border-radius:9px;
   background:#ffffff08;
+  text-align:center;
 }
-
 .youtube-area p { color:var(--muted); }
-
+.youtube-area a {
+  display:inline-block;
+  margin-top:10px;
+  color:var(--gold);
+  text-decoration:underline;
+}
 .back-link {
   display:inline-block;
   margin-bottom:25px;
   color:var(--gold);
   cursor:pointer;
 }
-
 @media(max-width:760px) {
   .album-hero { grid-template-columns:1fr; }
   .song-list { grid-template-columns:1fr; }
-  .brand-logos img { height:160px; }
-}
-
-@media(max-width:420px) {
-  .brand-logos { gap:10px; }
-  .brand-logos img { height:130px; }
 }
 </style>
 </head>
-
 <body>
 
 <div class="petals" aria-hidden="true"></div>
@@ -147,7 +129,11 @@
 <header>
   <div class="wrap">
     <nav>
-      <a class="brand" href="index.html">FAITH EXPANSE</a>
+      <a class="brand" href="index.html" aria-label="FAITH EXPANSE - Início">
+        <img class="site-logo"
+             src="logo%20(Faith%20Expanse).png"
+             alt="Logo FAITH EXPANSE">
+      </a>
       <div class="links">
         <a href="index.html">Início</a>
         <a href="amaxia.html" aria-current="page">AMAXIA</a>
@@ -158,7 +144,6 @@
 </header>
 
 <main>
-
 <section class="wrap album-hero">
   <div>
     <div class="eyebrow">FAITH EXPANSE apresenta</div>
@@ -170,14 +155,10 @@
     </p>
   </div>
 
-  <div class="brand-logos">
-    <img
-      src="logo%20(Faith%20Expanse).png"
-      alt="Logo FAITH EXPANSE">
-
-    <img
-      src="logo%20(amaxia).jpeg"
-      alt="Logo AMAXIA">
+  <div>
+    <img class="album-cover"
+         src="logo%20(amaxia).jpeg"
+         alt="Logo AMAXIA">
   </div>
 </section>
 
@@ -196,7 +177,6 @@
           artificial, imaginação e criação.
         </p>
       </div>
-
       <img class="back-cover"
            src="assets/contracapa-amaxia.jpg"
            alt="Contracapa do álbum AMAXIA">
@@ -213,7 +193,6 @@
     </p>
 
     <div class="song-list" id="songList"></div>
-
     <article class="song-detail" id="songDetail">
       <button class="back-link" id="backButton" type="button">
         ← Voltar à lista de músicas
@@ -222,11 +201,6 @@
       <h2 id="detailTitle"></h2>
 
       <img class="song-art" id="detailImage" src="" alt="">
-
-      <div class="song-lyrics">
-        <p class="song-header" id="detailHeader"></p>
-        <div id="detailLyric"></div>
-      </div>
 
       <div class="youtube-area">
         <h3>Ouça a música</h3>
@@ -237,6 +211,11 @@
            rel="noopener noreferrer" hidden>
           Assistir no YouTube
         </a>
+      </div>
+
+      <div class="song-lyrics">
+        <p class="song-header" id="detailHeader"></p>
+        <div id="detailLyric"></div>
       </div>
     </article>
   </div>
@@ -251,7 +230,6 @@
 </footer>
 
 <script src="js/conteudo.js"></script>
-
 <script>
 (function() {
   const capas = [
@@ -263,7 +241,6 @@
     'escolhi amar.jpeg',
     'menino confuso.jpeg'
   ];
-
   const lista = document.getElementById('songList');
   const detalhe = document.getElementById('songDetail');
   const titulo = document.getElementById('detailTitle');
@@ -279,14 +256,12 @@
 
     imagem.src = 'assets/capas-faixas/' +
       encodeURIComponent(capas[indice]);
-
     imagem.alt = 'Capa da música ' + musica.title;
 
     cabecalho.textContent = musica.header || '';
     letra.textContent = musica.lyric || '';
 
     const urlYoutube = musica.youtube || '';
-
     if (urlYoutube) {
       linkYoutube.href = urlYoutube;
       linkYoutube.hidden = false;
@@ -299,7 +274,6 @@
 
     detalhe.classList.add('visible');
     lista.style.display = 'none';
-
     document.querySelectorAll('.song-button').forEach(function(botao) {
       botao.classList.remove('active');
     });
@@ -326,7 +300,6 @@
     const nome = document.createElement('span');
     nome.className = 'song-title';
     nome.textContent = musica.title;
-
     botao.appendChild(numero);
     botao.appendChild(nome);
 
@@ -345,7 +318,6 @@
 
 })();
 </script>
-
 <script>
 (function(){
   if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
@@ -356,21 +328,16 @@
   for (var i = 0; i < count; i++) {
     var p = document.createElement('span');
     p.className = 'petal';
-
     var size = 8 + Math.random() * 10;
-
     p.style.left = (Math.random() * 100) + 'vw';
     p.style.width = size + 'px';
     p.style.height = (size * 0.8) + 'px';
-
     p.style.animationDuration =
       (12 + Math.random() * 14) + 's, ' +
       (3 + Math.random() * 4) + 's';
-
     p.style.animationDelay =
       (-Math.random() * 26) + 's, ' +
       (-Math.random() * 4) + 's';
-
     p.style.opacity = (0.35 + Math.random() * 0.5).toFixed(2);
 
     box.appendChild(p);
@@ -380,4 +347,3 @@
 
 </body>
 </html>
-
