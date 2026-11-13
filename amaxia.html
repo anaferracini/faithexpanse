@@ -12,14 +12,14 @@
 <style>
 .album-hero {
   display:grid;
-  grid-template-columns:1fr 1fr;
+  grid-template-columns:1fr 1.15fr;
   align-items:center;
-  gap:45px;
+  gap:35px;
   padding:65px 0;
 }
 .album-cover {
   width:100%;
-  max-width:420px;
+  max-width:520px;
   display:block;
   margin:auto;
   object-fit:contain;
@@ -112,6 +112,7 @@
 }
 @media(max-width:760px) {
   .album-hero { grid-template-columns:1fr; }
+  .album-cover { max-width:440px; }
   .song-list { grid-template-columns:1fr; }
 }
 </style>
