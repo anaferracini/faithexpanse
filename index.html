@@ -55,6 +55,52 @@
   height: auto;
   object-fit: contain;
 }
+
+/* Menu suspenso dos projetos */
+.project-dropdown {
+  position: relative;
+}
+.project-dropdown summary {
+  list-style: none;
+  cursor: pointer;
+}
+.project-dropdown summary::-webkit-details-marker {
+  display: none;
+}
+.project-dropdown summary::after {
+  content: "⌄";
+  display: inline-block;
+  margin-left: 7px;
+  transition: transform .2s;
+}
+.project-dropdown[open] summary::after {
+  transform: rotate(180deg);
+}
+.project-dropdown .dropdown-list {
+  position: absolute;
+  top: calc(100% + 12px);
+  right: 0;
+  z-index: 1000;
+  min-width: 230px;
+  padding: 10px;
+  display: grid;
+  gap: 3px;
+  background: #17213b;
+  border: 1px solid #d9b87988;
+  border-radius: 9px;
+  box-shadow: 0 12px 30px #0008;
+}
+.project-dropdown .dropdown-list a {
+  display: block;
+  padding: 10px 12px;
+  color: var(--cream);
+  text-decoration: none;
+  border-radius: 5px;
+}
+.project-dropdown .dropdown-list a:hover {
+  color: var(--gold);
+  background: #ffffff10;
+}
 @media(max-width:760px) {
   .project-grid {
     grid-template-columns: repeat(2, 1fr);
@@ -64,6 +110,12 @@
     min-height: 90px;
     padding: 15px 10px;
     font-size: 1.05rem;
+  }
+}
+@media(max-width:520px) {
+  .project-dropdown .dropdown-list {
+    right: -55px;
+    min-width: 210px;
   }
 }
 @media(max-width:420px) {
@@ -81,12 +133,31 @@
 <header>
   <div class="wrap">
     <nav>
-      <a class="brand" href="#inicio" aria-label="FAITH EXPANSE - Início">
+      <a class="brand" href="index.html#inicio" aria-label="FAITH EXPANSE - Início">
         <img class="site-logo" src="logo%20(Faith%20Expanse).png" alt="FAITH EXPANSE">
       </a>
+
       <div class="links">
         <a href="#inicio">Início</a>
-        <a href="#projetos">Projetos</a>
+
+        <details class="project-dropdown">
+          <summary>Projetos</summary>
+          <div class="dropdown-list">
+            <a href="manga.html">Mangá</a>
+            <a href="amaxia.html">AMAXIA</a>
+            <a href="literatura.html">Literatura</a>
+            <a href="contrastride.html">ContraStride</a>
+            <a href="entrelinhas.html">Entrelinhas</a>
+            <a href="diario.html">Diário de uma Cristã</a>
+            <a href="igreja.html">Igreja</a>
+            <a href="jogo.html">Jogo</a>
+            <a href="arte.html">Arte e Poesias</a>
+            <a href="missoes.html">Missões pelo Mundo</a>
+            <a href="historia.html">História de A. Q. Ferracini</a>
+            <a href="amelpia.html">AmelpIA</a>
+          </div>
+        </details>
+
         <a href="blog.html">Blog</a>
       </div>
     </nav>
@@ -108,6 +179,24 @@
       <a href="#projetos">
         <button type="button">Conheça nossos projetos</button>
       </a>
+    </div>
+  </section>
+
+  <section id="sobre">
+    <div class="wrap">
+      <div class="eyebrow">Nossa essência</div>
+      <h2>Sobre o FAITH EXPANSE</h2>
+      <p class="lead">
+        FAITH EXPANSE é um universo de criação que reúne diferentes projetos
+        artísticos, culturais e tecnológicos com o propósito de expandir a fé,
+        anunciar Jesus e revelar a glória de Deus por meio da arte.
+      </p>
+      <p class="section-intro">
+        Cada projeto representa uma maneira diferente de expressar ideias,
+        contar histórias, compartilhar experiências e transmitir mensagens.
+        Música, literatura, mangá, jogos, arte e tecnologia se encontram
+        neste espaço, unidos por um mesmo propósito.
+      </p>
     </div>
   </section>
 
