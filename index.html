@@ -1,3 +1,4 @@
+
 <!doctype html>
 <html lang="pt-BR">
 <head>
@@ -8,6 +9,8 @@
 <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+<div class="petals" aria-hidden="true"></div>
+
 <header><div class="wrap"><nav>
 <a class="brand" href="#inicio">FAITH EXPANSE</a>
 <div class="links"><a href="#projeto">O projeto</a><a href="#album">AMAXIA</a><a href="#musicas">Músicas e letras</a><a href="#galeria">Galeria</a><a href="sobre.html">Sobre</a><a href="blog.html">Blog</a></div>
@@ -75,5 +78,25 @@ const grid=document.getElementById('trackGrid');
  if(track.header){const h=document.createElement('p');h.className='lyrics-header';h.textContent=track.header;lyrics.prepend(h)}
  card.append(art,info,lyrics);grid.append(card);
 });
+</script>
+
+<script>
+(function(){
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  var box = document.querySelector('.petals');
+  var count = window.innerWidth < 700 ? 14 : 26;
+  for (var i = 0; i < count; i++) {
+    var p = document.createElement('span');
+    p.className = 'petal';
+    var size = 8 + Math.random() * 10;
+    p.style.left = (Math.random() * 100) + 'vw';
+    p.style.width = size + 'px';
+    p.style.height = (size * 0.8) + 'px';
+    p.style.animationDuration = (12 + Math.random() * 14) + 's, ' + (3 + Math.random() * 4) + 's';
+    p.style.animationDelay = (-Math.random() * 26) + 's, ' + (-Math.random() * 4) + 's';
+    p.style.opacity = (0.35 + Math.random() * 0.5).toFixed(2);
+    box.appendChild(p);
+  }
+})();
 </script>
 </body></html>
