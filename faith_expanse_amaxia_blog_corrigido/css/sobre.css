@@ -1,11 +1,11 @@
 :root{
   --bg:#050510;
-  --gold:#d4af37;
-  --gold-soft:#e8cf7a;
-  --sakura:#f4b6c8;
-  --cream:#f3ece2;
-  --muted:#b9b3bd;
-  --line:#d4af3733;
+  --gold:#e8a0b5;
+  --gold-soft:#f4c4d2;
+  --sakura:#e8a0b5;
+  --cream:#ffffff;
+  --muted:#c9c0c8;
+  --line:#e8a0b533;
 }
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
