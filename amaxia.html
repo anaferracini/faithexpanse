@@ -8,14 +8,8 @@
 <meta name="description" content="AMAXIA — Álbum musical do projeto FAITH EXPANSE.">
 <title>AMAXIA — FAITH EXPANSE</title>
 <link rel="stylesheet" href="css/style.css">
+
 <style>
-.site-logo {
-  display:block;
-  width:150px;
-  max-width:38vw;
-  height:auto;
-  object-fit:contain;
-}
 .album-hero {
   display:grid;
   grid-template-columns:1fr 1fr;
@@ -122,6 +116,7 @@
 }
 </style>
 </head>
+
 <body>
 
 <div class="petals" aria-hidden="true"></div>
@@ -129,11 +124,6 @@
 <header>
   <div class="wrap">
     <nav>
-      <a class="brand" href="index.html" aria-label="FAITH EXPANSE - Início">
-        <img class="site-logo"
-             src="logo%20(Faith%20Expanse).png"
-             alt="Logo FAITH EXPANSE">
-      </a>
       <div class="links">
         <a href="index.html">Início</a>
         <a href="amaxia.html" aria-current="page">AMAXIA</a>
@@ -144,6 +134,7 @@
 </header>
 
 <main>
+
 <section class="wrap album-hero">
   <div>
     <div class="eyebrow">FAITH EXPANSE apresenta</div>
@@ -177,6 +168,7 @@
           artificial, imaginação e criação.
         </p>
       </div>
+
       <img class="back-cover"
            src="assets/contracapa-amaxia.jpg"
            alt="Contracapa do álbum AMAXIA">
@@ -193,6 +185,7 @@
     </p>
 
     <div class="song-list" id="songList"></div>
+
     <article class="song-detail" id="songDetail">
       <button class="back-link" id="backButton" type="button">
         ← Voltar à lista de músicas
@@ -230,6 +223,7 @@
 </footer>
 
 <script src="js/conteudo.js"></script>
+
 <script>
 (function() {
   const capas = [
@@ -241,6 +235,7 @@
     'escolhi amar.jpeg',
     'menino confuso.jpeg'
   ];
+
   const lista = document.getElementById('songList');
   const detalhe = document.getElementById('songDetail');
   const titulo = document.getElementById('detailTitle');
@@ -262,6 +257,7 @@
     letra.textContent = musica.lyric || '';
 
     const urlYoutube = musica.youtube || '';
+
     if (urlYoutube) {
       linkYoutube.href = urlYoutube;
       linkYoutube.hidden = false;
@@ -274,6 +270,7 @@
 
     detalhe.classList.add('visible');
     lista.style.display = 'none';
+
     document.querySelectorAll('.song-button').forEach(function(botao) {
       botao.classList.remove('active');
     });
@@ -300,6 +297,7 @@
     const nome = document.createElement('span');
     nome.className = 'song-title';
     nome.textContent = musica.title;
+
     botao.appendChild(numero);
     botao.appendChild(nome);
 
@@ -318,6 +316,7 @@
 
 })();
 </script>
+
 <script>
 (function(){
   if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
@@ -329,17 +328,20 @@
     var p = document.createElement('span');
     p.className = 'petal';
     var size = 8 + Math.random() * 10;
+
     p.style.left = (Math.random() * 100) + 'vw';
     p.style.width = size + 'px';
     p.style.height = (size * 0.8) + 'px';
+
     p.style.animationDuration =
       (12 + Math.random() * 14) + 's, ' +
       (3 + Math.random() * 4) + 's';
+
     p.style.animationDelay =
       (-Math.random() * 26) + 's, ' +
       (-Math.random() * 4) + 's';
-    p.style.opacity = (0.35 + Math.random() * 0.5).toFixed(2);
 
+    p.style.opacity = (0.35 + Math.random() * 0.5).toFixed(2);
     box.appendChild(p);
   }
 })();
