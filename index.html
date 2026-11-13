@@ -1,14 +1,12 @@
+
 <!doctype html>
 <html lang="pt-BR">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="theme-color" content="#0b1020">
-
 <meta name="description" content="FAITH EXPANSE — Expandindo a fé, anunciando Jesus e revelando a glória de Deus por meio da arte.">
-
 <title>FAITH EXPANSE</title>
-
 <link rel="stylesheet" href="css/style.css">
 
 <style>
@@ -18,7 +16,6 @@
   gap: 18px;
   margin-top: 35px;
 }
-
 .project-card {
   min-height: 105px;
   display: flex;
@@ -34,14 +31,12 @@
   font-size: 1.25rem;
   transition: border-color .3s, background .3s, transform .3s;
 }
-
 .project-card:hover {
   border-color: var(--gold);
   background: #ffffff12;
   color: var(--gold);
   transform: translateY(-3px);
 }
-
 .blog-area {
   text-align: center;
   padding: 35px 22px;
@@ -50,31 +45,33 @@
   border-radius: 9px;
   margin-top: 30px;
 }
-
 .blog-area a {
   color: var(--gold);
 }
-
+.site-logo {
+  display: block;
+  width: 150px;
+  max-width: 38vw;
+  height: auto;
+  object-fit: contain;
+}
 @media(max-width:760px) {
   .project-grid {
     grid-template-columns: repeat(2, 1fr);
     gap: 12px;
   }
-
   .project-card {
     min-height: 90px;
     padding: 15px 10px;
     font-size: 1.05rem;
   }
 }
-
 @media(max-width:420px) {
   .project-grid {
     grid-template-columns: 1fr;
   }
 }
 </style>
-
 </head>
 
 <body>
@@ -84,8 +81,9 @@
 <header>
   <div class="wrap">
     <nav>
-      <a class="brand" href="#inicio">FAITH EXPANSE</a>
-
+      <a class="brand" href="#inicio" aria-label="FAITH EXPANSE - Início">
+        <img class="site-logo" src="logo%20(Faith%20Expanse).png" alt="FAITH EXPANSE">
+      </a>
       <div class="links">
         <a href="#inicio">Início</a>
         <a href="#projetos">Projetos</a>
@@ -97,134 +95,63 @@
 
 <main>
 
-  <!-- APRESENTAÇÃO PRINCIPAL -->
-
   <section class="wrap hero" id="inicio" style="border:0; grid-template-columns:1fr; min-height:440px; text-align:center;">
-
     <div class="hero-copy">
-
       <div class="eyebrow">Um universo de criação e fé</div>
-
       <h1>FAITH EXPANSE</h1>
-
       <p class="tagline">
         Expandindo a fé, anunciando Jesus e revelando a glória de Deus por meio da arte.
       </p>
-
       <p class="lead" style="margin:25px auto;">
         A fé também pode ser expressa por meio de histórias, músicas, livros, desenhos, tecnologia e muitas outras formas de criação.
       </p>
-
       <a href="#projetos">
         <button type="button">Conheça nossos projetos</button>
       </a>
-
     </div>
-
   </section>
 
-
-  <!-- PROJETOS -->
-
   <section id="projetos">
-
     <div class="wrap">
-
       <div class="eyebrow">Um universo em expansão</div>
-
       <h2>Nossos projetos</h2>
-
       <p class="section-intro">
         Diferentes formas de criar, compartilhar experiências e expressar a fé.
       </p>
 
       <div class="project-grid">
-
-        <a class="project-card" href="manga.html">
-          Mangá
-        </a>
-
-        <a class="project-card" href="amaxia.html">
-          AMAXIA
-        </a>
-
-        <a class="project-card" href="literatura.html">
-          Literatura
-        </a>
-
-        <a class="project-card" href="contrastride.html">
-          ContraStride
-        </a>
-
-        <a class="project-card" href="entrelinhas.html">
-          Entrelinhas
-        </a>
-
-        <a class="project-card" href="diario.html">
-          Diário de uma Cristã
-        </a>
-
-        <a class="project-card" href="igreja.html">
-          Igreja
-        </a>
-
-        <a class="project-card" href="jogo.html">
-          Jogo
-        </a>
-
-        <a class="project-card" href="arte.html">
-          Arte e Poesias
-        </a>
-
-        <a class="project-card" href="missoes.html">
-          Missões pelo Mundo
-        </a>
-
-        <a class="project-card" href="historia.html">
-          História de A. Q. Ferracini
-        </a>
-
-        <a class="project-card" href="amelpia.html">
-          AmelpIA
-        </a>
-
+        <a class="project-card" href="manga.html">Mangá</a>
+        <a class="project-card" href="amaxia.html">AMAXIA</a>
+        <a class="project-card" href="literatura.html">Literatura</a>
+        <a class="project-card" href="contrastride.html">ContraStride</a>
+        <a class="project-card" href="entrelinhas.html">Entrelinhas</a>
+        <a class="project-card" href="diario.html">Diário de uma Cristã</a>
+        <a class="project-card" href="igreja.html">Igreja</a>
+        <a class="project-card" href="jogo.html">Jogo</a>
+        <a class="project-card" href="arte.html">Arte e Poesias</a>
+        <a class="project-card" href="missoes.html">Missões pelo Mundo</a>
+        <a class="project-card" href="historia.html">História de A. Q. Ferracini</a>
+        <a class="project-card" href="amelpia.html">AmelpIA</a>
       </div>
-
     </div>
-
   </section>
 
-
-  <!-- BLOG -->
-
   <section id="blog">
-
     <div class="wrap">
-
       <div class="eyebrow">Acompanhe nossas novidades</div>
-
       <h2>Blog</h2>
-
       <div class="blog-area">
-
         <p class="lead">
           Um espaço para novidades, bastidores, lançamentos e conteúdos complementares dos projetos.
         </p>
-
         <a href="blog.html">
           <button type="button">Visitar o Blog</button>
         </a>
-
       </div>
-
     </div>
-
   </section>
 
 </main>
-
-
-<!-- RODAPÉ -->
 
 <footer>
   <div class="wrap">
@@ -234,41 +161,28 @@
   </div>
 </footer>
 
-
-<!-- EFEITO DAS PÉTALAS -->
-
 <script>
 (function(){
-
   if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
-
   var box = document.querySelector('.petals');
   var count = window.innerWidth < 700 ? 14 : 26;
 
   for (var i = 0; i < count; i++) {
-
     var p = document.createElement('span');
     p.className = 'petal';
-
     var size = 8 + Math.random() * 10;
-
     p.style.left = (Math.random() * 100) + 'vw';
     p.style.width = size + 'px';
     p.style.height = (size * 0.8) + 'px';
-
     p.style.animationDuration =
       (12 + Math.random() * 14) + 's, ' +
       (3 + Math.random() * 4) + 's';
-
     p.style.animationDelay =
       (-Math.random() * 26) + 's, ' +
       (-Math.random() * 4) + 's';
-
     p.style.opacity = (0.35 + Math.random() * 0.5).toFixed(2);
-
     box.appendChild(p);
   }
-
 })();
 </script>
 
