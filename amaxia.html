@@ -70,13 +70,13 @@
   max-width:560px;
   height:auto;
   display:block;
-  margin:0 auto 35px;
+  margin:0 auto 20px;
   border:1px solid #ffffff25;
   box-shadow:0 20px 55px #0009;
 }
 .song-lyrics {
   max-width:760px;
-  margin:0 auto;
+  margin:35px auto 0;
   white-space:pre-wrap;
   font-family:Georgia,serif;
   line-height:1.9;
@@ -89,13 +89,20 @@
 }
 .youtube-area {
   max-width:760px;
-  margin:35px auto 0;
+  margin:0 auto;
   padding:22px;
   border:1px solid #d9b87955;
   border-radius:9px;
   background:#ffffff08;
+  text-align:center;
 }
 .youtube-area p { color:var(--muted); }
+.youtube-area a {
+  display:inline-block;
+  margin-top:10px;
+  color:var(--gold);
+  text-decoration:underline;
+}
 .back-link {
   display:inline-block;
   margin-bottom:25px;
@@ -188,10 +195,7 @@
 
       <img class="song-art" id="detailImage" src="" alt="">
 
-      <div class="song-lyrics">
-        <p class="song-header" id="detailHeader"></p>
-        <div id="detailLyric"></div>
-      </div>
+      <!-- LINK DO YOUTUBE LOGO ABAIXO DA IMAGEM -->
 
       <div class="youtube-area">
         <h3>Ouça a música</h3>
@@ -202,6 +206,13 @@
            rel="noopener noreferrer" hidden>
           Assistir no YouTube
         </a>
+      </div>
+
+      <!-- LETRA DA MÚSICA -->
+
+      <div class="song-lyrics">
+        <p class="song-header" id="detailHeader"></p>
+        <div id="detailLyric"></div>
       </div>
     </article>
   </div>
@@ -242,6 +253,7 @@
 
   function abrirMusica(musica, indice) {
     titulo.textContent = musica.title;
+
     imagem.src = 'assets/capas-faixas/' +
       encodeURIComponent(capas[indice]);
     imagem.alt = 'Capa da música ' + musica.title;
@@ -340,4 +352,3 @@
 
 </body>
 </html>
-
