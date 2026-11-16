@@ -75,22 +75,33 @@
   background:#ffffff10;
 }
 
+/* PADRÃO DE ALINHAMENTO */
+
+main h1,
+main h2,
+main h3,
+main .eyebrow,
+main p {
+  text-align:left;
+}
+
 /* APRESENTAÇÃO PRINCIPAL */
 
 .home-hero {
   min-height:480px;
   display:flex;
   align-items:center;
-  justify-content:center;
-  text-align:center;
+  justify-content:flex-start;
   padding:75px 25px;
   border:0;
   grid-template-columns:1fr;
+  text-align:left;
 }
 
 .home-hero-content {
   max-width:900px;
-  margin:auto;
+  width:100%;
+  margin:0;
 }
 
 .home-hero h1 {
@@ -100,32 +111,34 @@
 
 .home-hero .tagline {
   max-width:800px;
-  margin:20px auto;
+  margin:20px 0;
 }
 
 .home-hero .lead {
   max-width:760px;
-  margin:25px auto;
+  margin:25px 0;
   line-height:1.9;
 }
 
-/* INTRODUÇÃO */
+/* INTRODUÇÃO E MISSÃO */
 
 .intro-section {
-  text-align:center;
+  text-align:left;
 }
 
 .intro-content {
   max-width:850px;
-  margin:auto;
+  margin:0;
 }
 
 .intro-content p {
+  text-align:left;
   line-height:1.9;
   margin-bottom:20px;
 }
 
-/* OS TRÊS PILARES */
+/* OS TRÊS PILARES
+   Mantidos como estavam */
 
 .pillars-section {
   text-align:center;
@@ -176,6 +189,7 @@
   color:var(--muted);
   line-height:1.85;
   margin-bottom:14px;
+  text-align:left;
 }
 
 .pillar-highlight {
@@ -189,16 +203,20 @@
 /* IMPOSSÍVIA */
 
 .impossivia-section {
-  text-align:center;
+  text-align:left;
 }
 
 .impossivia-content {
   max-width:850px;
-  margin:auto;
+  margin:0;
   padding:45px 35px;
   border:1px solid #d9b87977;
   border-radius:12px;
   background:linear-gradient(145deg,#ffffff10,#ffffff04);
+}
+
+.impossivia-content h2 {
+  text-align:left;
 }
 
 .impossivia-title {
@@ -207,29 +225,32 @@
   font-size:clamp(1.8rem,4vw,2.7rem);
   font-style:italic;
   line-height:1.5;
-  margin:20px auto;
+  margin:20px 0;
+  text-align:left;
 }
 
 .impossivia-content p {
   color:var(--muted);
   line-height:1.9;
-  margin:18px auto;
+  margin:18px 0;
+  text-align:left;
 }
 
 /* NOSSA ESSÊNCIA */
 
 .essence-content {
   max-width:850px;
-  margin:auto;
+  margin:0;
 }
 
 .essence-content p {
   line-height:1.9;
   margin-bottom:20px;
+  text-align:left;
 }
 
 .essence-quote {
-  margin:35px auto;
+  margin:35px 0;
   padding:25px;
   border-left:3px solid var(--gold);
   background:#ffffff08;
@@ -238,19 +259,25 @@
   font-size:1.2rem;
   font-style:italic;
   line-height:1.8;
+  text-align:left;
 }
 
 /* ENCERRAMENTO */
 
 .closing-section {
-  text-align:center;
+  text-align:left;
   padding-top:65px;
   padding-bottom:75px;
 }
 
 .closing-content {
   max-width:800px;
-  margin:auto;
+  margin:0;
+}
+
+.closing-content h2,
+.closing-content p {
+  text-align:left;
 }
 
 .closing-signature {
@@ -259,7 +286,8 @@
   font-size:clamp(1.3rem,3vw,2rem);
   font-style:italic;
   line-height:1.6;
-  margin:25px auto;
+  margin:25px 0;
+  text-align:left;
 }
 
 /* RESPONSIVIDADE */
@@ -337,6 +365,7 @@
 
   <section class="wrap hero home-hero" id="inicio">
     <div class="home-hero-content">
+
       <div class="eyebrow">Um universo de criação e fé</div>
 
       <h1>Faith Expanse</h1>
@@ -350,6 +379,7 @@
         a vida, como reconhecemos nosso próprio valor e como nos relacionamos
         com as pessoas ao nosso redor.
       </p>
+
     </div>
   </section>
 
@@ -357,11 +387,14 @@
 
   <section id="missao" class="intro-section">
     <div class="wrap">
+
       <div class="eyebrow">O que nos move</div>
 
       <h2>Nossa missão</h2>
 
-        <p class="wrap">
+      <div class="intro-content">
+
+        <p class="lead">
           Faith Expanse nasceu da compreensão de que a fé não precisa
           permanecer limitada a uma única forma de expressão.
         </p>
@@ -382,6 +415,7 @@
           Por isso, nossa missão se apoia em três direções fundamentais:
           a fé em Deus, a fé em você e a fé no próximo.
         </p>
+
       </div>
     </div>
   </section>
