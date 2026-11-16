@@ -11,6 +11,70 @@
 
 <style>
 
+/* LOGO */
+
+.site-logo {
+  display:block;
+  width:150px;
+  max-width:38vw;
+  height:auto;
+  object-fit:contain;
+}
+
+/* MENU SUSPENSO DOS PROJETOS */
+
+.project-dropdown {
+  position:relative;
+}
+
+.project-dropdown summary {
+  list-style:none;
+  cursor:pointer;
+}
+
+.project-dropdown summary::-webkit-details-marker {
+  display:none;
+}
+
+.project-dropdown summary::after {
+  content:"⌄";
+  display:inline-block;
+  margin-left:7px;
+  transition:transform .2s;
+}
+
+.project-dropdown[open] summary::after {
+  transform:rotate(180deg);
+}
+
+.project-dropdown .dropdown-list {
+  position:absolute;
+  top:calc(100% + 12px);
+  right:0;
+  z-index:1000;
+  min-width:230px;
+  padding:10px;
+  display:grid;
+  gap:3px;
+  background:#17213b;
+  border:1px solid #d9b87988;
+  border-radius:9px;
+  box-shadow:0 12px 30px #0008;
+}
+
+.project-dropdown .dropdown-list a {
+  display:block;
+  padding:10px 12px;
+  color:var(--cream);
+  text-decoration:none;
+  border-radius:5px;
+}
+
+.project-dropdown .dropdown-list a:hover {
+  color:var(--gold);
+  background:#ffffff10;
+}
+
 /* APRESENTAÇÃO PRINCIPAL */
 
 .home-hero {
@@ -19,8 +83,9 @@
   align-items:center;
   justify-content:center;
   text-align:center;
-  padding:85px 25px;
+  padding:75px 25px;
   border:0;
+  grid-template-columns:1fr;
 }
 
 .home-hero-content {
@@ -33,22 +98,15 @@
   margin:18px 0;
 }
 
-.home-signature {
-  color:var(--gold);
-  font-family:Georgia,serif;
-  font-size:clamp(1.3rem,3vw,2rem);
-  font-style:italic;
-  line-height:1.5;
-  margin:25px auto;
+.home-hero .tagline {
+  max-width:800px;
+  margin:20px auto;
 }
 
-.home-purpose {
+.home-hero .lead {
   max-width:760px;
-  margin:30px auto 0;
-  font-family:Georgia,serif;
-  font-size:clamp(1.15rem,2.5vw,1.55rem);
-  line-height:1.7;
-  color:var(--cream);
+  margin:25px auto;
+  line-height:1.9;
 }
 
 /* INTRODUÇÃO */
@@ -67,14 +125,14 @@
   margin-bottom:20px;
 }
 
-/* TRÊS PILARES */
+/* OS TRÊS PILARES */
 
 .pillars-section {
   text-align:center;
 }
 
 .pillars-intro {
-  max-width:780px;
+  max-width:800px;
   margin:0 auto 35px;
 }
 
@@ -110,7 +168,7 @@
 .pillar-card h3 {
   color:var(--gold);
   font-family:Georgia,serif;
-  font-size:1.45rem;
+  font-size:1.4rem;
   margin-bottom:18px;
 }
 
@@ -204,70 +262,6 @@
   margin:25px auto;
 }
 
-/* LOGO */
-
-.site-logo {
-  display:block;
-  width:150px;
-  max-width:38vw;
-  height:auto;
-  object-fit:contain;
-}
-
-/* MENU SUSPENSO DOS PROJETOS */
-
-.project-dropdown {
-  position:relative;
-}
-
-.project-dropdown summary {
-  list-style:none;
-  cursor:pointer;
-}
-
-.project-dropdown summary::-webkit-details-marker {
-  display:none;
-}
-
-.project-dropdown summary::after {
-  content:"⌄";
-  display:inline-block;
-  margin-left:7px;
-  transition:transform .2s;
-}
-
-.project-dropdown[open] summary::after {
-  transform:rotate(180deg);
-}
-
-.project-dropdown .dropdown-list {
-  position:absolute;
-  top:calc(100% + 12px);
-  right:0;
-  z-index:1000;
-  min-width:230px;
-  padding:10px;
-  display:grid;
-  gap:3px;
-  background:#17213b;
-  border:1px solid #d9b87988;
-  border-radius:9px;
-  box-shadow:0 12px 30px #0008;
-}
-
-.project-dropdown .dropdown-list a {
-  display:block;
-  padding:10px 12px;
-  color:var(--cream);
-  text-decoration:none;
-  border-radius:5px;
-}
-
-.project-dropdown .dropdown-list a:hover {
-  color:var(--gold);
-  background:#ffffff10;
-}
-
 /* RESPONSIVIDADE */
 
 @media(max-width:760px) {
@@ -281,7 +275,7 @@
 
   .home-hero {
     min-height:400px;
-    padding:65px 20px;
+    padding:60px 20px;
   }
 
   .impossivia-content {
@@ -314,4 +308,338 @@
         <a href="#inicio">Início</a>
 
         <details class="project-dropdown">
-          <summary
+          <summary>Projetos</summary>
+          <div class="dropdown-list">
+            <a href="manga.html">Mangá</a>
+            <a href="amaxia.html">AMAXIA</a>
+            <a href="literatura.html">Literatura</a>
+            <a href="contrastride.html">ContraStride</a>
+            <a href="entrelinhas.html">Entrelinhas</a>
+            <a href="diario.html">Diário de uma Cristã</a>
+            <a href="igreja.html">Igreja</a>
+            <a href="jogo.html">Jogo</a>
+            <a href="arte.html">Arte e Poesias</a>
+            <a href="missoes.html">Missões pelo Mundo</a>
+            <a href="historia.html">Jardim Secreto</a>
+            <a href="amelpia.html">AmelpIA</a>
+          </div>
+        </details>
+
+        <a href="blog.html">Blog</a>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+  <!-- APRESENTAÇÃO DO FAITH EXPANSE -->
+
+  <section class="wrap hero home-hero" id="inicio">
+    <div class="home-hero-content">
+      <div class="eyebrow">Um universo de criação e fé</div>
+
+      <h1>Faith Expanse</h1>
+
+      <p class="tagline">
+        Expandindo a fé em Deus, em você e no próximo.
+      </p>
+
+      <p class="home-signature">
+        Impossívia, o impossível tem uma via.
+      </p>
+
+      <p class="lead">
+        Acreditamos que a fé pode transformar a maneira como enxergamos
+        a vida, como reconhecemos nosso próprio valor e como nos relacionamos
+        com as pessoas ao nosso redor.
+      </p>
+    </div>
+  </section>
+
+  <!-- NOSSA MISSÃO -->
+
+  <section id="missao" class="intro-section">
+    <div class="wrap">
+      <div class="eyebrow">O que nos move</div>
+
+      <h2>Nossa missão</h2>
+
+      <div class="intro-content">
+        <p class="lead">
+          Faith Expanse nasceu da compreensão de que a fé não precisa
+          permanecer limitada a uma única forma de expressão.
+        </p>
+
+        <p class="section-intro">
+          Ela pode ser compartilhada por meio de uma história, despertada
+          por uma música, explorada em um livro, representada em uma obra
+          de arte ou transmitida por uma experiência criativa.
+        </p>
+
+        <p class="section-intro">
+          Nosso propósito é criar, comunicar e compartilhar conteúdos que
+          contribuam para uma vida com mais significado, esperança,
+          consciência e amor.
+        </p>
+
+        <p class="section-intro">
+          Por isso, nossa missão se apoia em três direções fundamentais:
+          a fé em Deus, a fé em você e a fé no próximo.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- OS TRÊS PILARES -->
+
+  <section id="pilares" class="pillars-section">
+    <div class="wrap">
+
+      <div class="eyebrow">Os fundamentos da nossa filosofia</div>
+
+      <h2>Os três pilares</h2>
+
+      <p class="section-intro pillars-intro">
+        Três dimensões que se complementam e representam a maneira como
+        desejamos enxergar a vida, desenvolver nossa caminhada e contribuir
+        para o mundo.
+      </p>
+
+      <div class="pillars-grid">
+
+        <article class="pillar-card">
+          <span class="pillar-number">01</span>
+
+          <h3>Fé em Deus</h3>
+
+          <p>
+            Acreditamos que Deus é a origem da vida, do amor e da esperança.
+            A fé em Deus nos convida a desenvolver uma relação verdadeira
+            com Ele, conhecer os ensinamentos de Jesus e buscar uma vida
+            orientada por seus princípios.
+          </p>
+
+          <p>
+            É reconhecer que nossa existência possui significado e que
+            podemos encontrar direção, propósito e esperança em nossa
+            caminhada espiritual.
+          </p>
+
+          <div class="pillar-highlight">
+            Uma fé que aproxima, orienta e transforma.
+          </div>
+        </article>
+
+        <article class="pillar-card">
+          <span class="pillar-number">02</span>
+
+          <h3>Fé em você</h3>
+
+          <p>
+            Acreditamos que cada pessoa possui valor, capacidades,
+            possibilidades e uma história que merece ser respeitada.
+            Ter fé em si mesmo é reconhecer esse valor e compreender
+            que podemos aprender, amadurecer e desenvolver nossos talentos.
+          </p>
+
+          <p>
+            Não significa acreditar que somos capazes de tudo sozinhos,
+            mas compreender que nossas limitações não anulam nossas
+            possibilidades de crescimento.
+          </p>
+
+          <div class="pillar-highlight">
+            Uma fé que fortalece, desenvolve e inspira.
+          </div>
+        </article>
+
+        <article class="pillar-card">
+          <span class="pillar-number">03</span>
+
+          <h3>Fé no próximo</h3>
+
+          <p>
+            Acreditamos que a vida também ganha significado na maneira
+            como tratamos as outras pessoas. Amar, respeitar, compreender
+            e acolher são atitudes que tornam a convivência mais humana.
+          </p>
+
+          <p>
+            A fé no próximo se expressa na empatia, na solidariedade,
+            no cuidado e na disposição de contribuir para que outras
+            pessoas também encontrem caminhos de esperança.
+          </p>
+
+          <div class="pillar-highlight">
+            Uma fé que aproxima, acolhe e compartilha.
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- IMPOSSÍVIA -->
+
+  <section id="impossivia" class="impossivia-section">
+    <div class="wrap">
+
+      <div class="eyebrow">Nossa frase de assinatura</div>
+
+      <div class="impossivia-content">
+
+        <h2>Impossívia</h2>
+
+        <div class="impossivia-title">
+          O impossível tem uma via.
+        </div>
+
+        <p>
+          Impossívia representa a ideia de que aquilo que parece impossível
+          pode revelar caminhos que ainda não conseguimos enxergar.
+        </p>
+
+        <p>
+          Nem sempre sabemos como chegar a determinado destino. Algumas
+          respostas ainda não existem para nós, algumas possibilidades
+          permanecem desconhecidas e alguns caminhos exigem paciência,
+          aprendizado, coragem e perseverança.
+        </p>
+
+        <p>
+          A proposta não é ignorar as dificuldades nem prometer que tudo
+          acontecerá exatamente como desejamos. É cultivar a esperança,
+          buscar alternativas e permanecer abertos às possibilidades
+          que podem surgir ao longo da jornada.
+        </p>
+
+        <p class="closing-signature">
+          Impossívia, o impossível tem uma via.
+        </p>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- NOSSA ESSÊNCIA -->
+
+  <section id="essencia">
+    <div class="wrap">
+
+      <div class="eyebrow">Muito além de uma única linguagem</div>
+
+      <h2>Nossa essência</h2>
+
+      <div class="essence-content">
+
+        <p class="lead">
+          A criatividade é uma das maneiras pelas quais podemos expressar
+          aquilo que acreditamos, sentimos, imaginamos e desejamos compartilhar.
+        </p>
+
+        <p class="section-intro">
+          Por isso, Faith Expanse reúne diferentes formas de criação.
+          Música, literatura, mangás, jogos, tecnologia, arte e conhecimento
+          fazem parte de um universo que não se limita a um único formato
+          ou linguagem.
+        </p>
+
+        <p class="section-intro">
+          Cada linguagem possui uma maneira própria de alcançar as pessoas.
+          Uma música pode despertar sentimentos; uma história pode provocar
+          reflexões; um personagem pode representar conflitos humanos;
+          uma obra de arte pode comunicar algo que palavras não conseguem
+          expressar.
+        </p>
+
+        <p class="section-intro">
+          Nosso objetivo é explorar essas possibilidades para criar
+          experiências que inspirem, ensinem, emocionem e convidem à reflexão.
+          Queremos que a criatividade seja um caminho para compartilhar
+          valores, transmitir esperança e estimular relações mais conscientes
+          com Deus, consigo mesmo e com o próximo.
+        </p>
+
+        <blockquote class="essence-quote">
+          Diferentes ideias, diferentes linguagens e diferentes caminhos,
+          unidos pelo propósito de expandir a fé.
+        </blockquote>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ENCERRAMENTO -->
+
+  <section class="closing-section">
+    <div class="wrap">
+      <div class="closing-content">
+
+        <div class="eyebrow">Faith Expanse</div>
+
+        <h2>Uma fé que se expande</h2>
+
+        <p class="section-intro">
+          Que cada criação seja uma oportunidade de aprender, refletir,
+          acreditar e compartilhar algo bom com o mundo.
+        </p>
+
+        <p class="closing-signature">
+          Expandindo a fé em Deus, em você e no próximo.
+        </p>
+
+        <p class="impossivia-title">
+          Impossívia, o impossível tem uma via.
+        </p>
+
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    Faith Expanse
+    <br>
+    Expandindo a fé em Deus, em você e no próximo.
+    <br>
+    Impossívia, o impossível tem uma via.
+  </div>
+</footer>
+
+<script>
+(function(){
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
+  var box = document.querySelector('.petals');
+  var count = window.innerWidth < 700 ? 14 : 26;
+
+  for (var i = 0; i < count; i++) {
+    var p = document.createElement('span');
+    p.className = 'petal';
+
+    var size = 8 + Math.random() * 10;
+
+    p.style.left = (Math.random() * 100) + 'vw';
+    p.style.width = size + 'px';
+    p.style.height = (size * 0.8) + 'px';
+
+    p.style.animationDuration =
+      (12 + Math.random() * 14) + 's, ' +
+      (3 + Math.random() * 4) + 's';
+
+    p.style.animationDelay =
+      (-Math.random() * 26) + 's, ' +
+      (-Math.random() * 4) + 's';
+
+    p.style.opacity = (0.35 + Math.random() * 0.5).toFixed(2);
+
+    box.appendChild(p);
+  }
+})();
+</script>
+
+</body>
+</html>
