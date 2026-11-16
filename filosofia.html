@@ -1,0 +1,1406 @@
+
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#0b1020">
+<meta name="description" content="O Tempo Não Passa: uma reflexão Faith Expanse sobre a existência, o infinito, as cerejeiras, a fé, o amor e os 12 projetos.">
+<title>O Tempo Não Passa | Faith Expanse</title>
+<link rel="stylesheet" href="css/style.css">
+
+<style>
+.site-logo {
+  display: block;
+  width: 150px;
+  max-width: 38vw;
+  height: auto;
+  object-fit: contain;
+}
+
+/* Menu suspenso */
+.project-dropdown {
+  position: relative;
+}
+.project-dropdown summary {
+  list-style: none;
+  cursor: pointer;
+}
+.project-dropdown summary::-webkit-details-marker {
+  display: none;
+}
+.project-dropdown summary::after {
+  content: "⌄";
+  display: inline-block;
+  margin-left: 7px;
+  transition: transform .2s;
+}
+.project-dropdown[open] summary::after {
+  transform: rotate(180deg);
+}
+.project-dropdown .dropdown-list {
+  position: absolute;
+  top: calc(100% + 12px);
+  right: 0;
+  z-index: 1000;
+  min-width: 230px;
+  padding: 10px;
+  display: grid;
+  gap: 3px;
+  background: #17213b;
+  border: 1px solid #d9b87988;
+  border-radius: 9px;
+  box-shadow: 0 12px 30px #0008;
+}
+.project-dropdown .dropdown-list a {
+  display: block;
+  padding: 10px 12px;
+  color: var(--cream);
+  text-decoration: none;
+  border-radius: 5px;
+}
+.project-dropdown .dropdown-list a:hover {
+  color: var(--gold);
+  background: #ffffff10;
+}
+
+/* Página do artigo */
+.article-hero {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 75px 25px 55px;
+  text-align: center;
+}
+.article-hero .eyebrow {
+  color: var(--rose);
+  letter-spacing: 3px;
+  font-size: .8rem;
+  text-transform: uppercase;
+}
+.article-hero h1 {
+  color: var(--gold);
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: clamp(2.4rem, 6vw, 4.4rem);
+  line-height: 1.15;
+  margin: 22px 0 15px;
+}
+.article-hero .subtitle {
+  color: var(--rose);
+  font-family: Georgia, 'Times New Roman', serif;
+  font-style: italic;
+  font-size: clamp(1.15rem, 3vw, 1.55rem);
+  line-height: 1.5;
+}
+.article-hero .intro {
+  max-width: 740px;
+  margin: 28px auto 0;
+  color: var(--muted);
+  line-height: 1.9;
+  font-size: 1.05rem;
+}
+.article-meta {
+  margin-top: 28px;
+  color: var(--muted);
+  font-size: .85rem;
+  letter-spacing: 1px;
+}
+
+.article-layout {
+  max-width: 900px;
+  margin: 0 auto 70px;
+  padding: 0 25px;
+}
+.article-body {
+  line-height: 1.9;
+  color: var(--cream);
+}
+.article-body p {
+  margin: 20px 0;
+}
+.article-body h2 {
+  color: var(--gold);
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: clamp(1.65rem, 4vw, 2.15rem);
+  line-height: 1.35;
+  margin: 65px 0 20px;
+}
+.article-body h3 {
+  color: var(--rose);
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 1.35rem;
+  font-weight: normal;
+  margin: 35px 0 15px;
+}
+.article-body strong {
+  color: var(--gold);
+}
+.article-body em {
+  color: var(--rose);
+}
+.article-body blockquote {
+  margin: 35px 0;
+  padding: 22px 25px;
+  border-left: 3px solid var(--rose);
+  background: #ffffff08;
+  color: var(--gold);
+  font-family: Georgia, 'Times New Roman', serif;
+  font-style: italic;
+  font-size: 1.25rem;
+  line-height: 1.7;
+}
+.article-body .small-note {
+  color: var(--muted);
+  font-size: .9rem;
+}
+.article-divider {
+  width: 90px;
+  height: 1px;
+  background: var(--gold);
+  margin: 55px auto;
+  opacity: .65;
+}
+.article-highlight {
+  margin: 35px 0;
+  padding: 28px;
+  border: 1px solid #d9b87977;
+  border-radius: 10px;
+  background: linear-gradient(145deg, #d9b87912, #ffffff04);
+  text-align: center;
+}
+.article-highlight p {
+  color: var(--gold);
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 1.25rem;
+  font-style: italic;
+  margin: 0;
+}
+.article-highlight small {
+  display: block;
+  color: var(--muted);
+  margin-top: 15px;
+  font-size: .85rem;
+}
+.article-list {
+  padding-left: 24px;
+}
+.article-list li {
+  margin: 15px 0;
+  line-height: 1.8;
+}
+.article-link {
+  color: var(--gold);
+  text-decoration: none;
+  font-weight: bold;
+}
+.article-link:hover {
+  color: var(--rose);
+  text-decoration: underline;
+}
+
+/* Símbolos das cerejeiras */
+.cherry-section {
+  margin: 35px 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+.cherry-card {
+  padding: 25px;
+  border: 1px solid #d9b87955;
+  border-radius: 10px;
+  background: #ffffff08;
+}
+.cherry-card h3 {
+  margin-top: 0;
+}
+.cherry-card p {
+  font-size: .95rem;
+}
+.cherry-card .symbol {
+  color: var(--rose);
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+.cherry-card.fruit .symbol {
+  color: #d99aab;
+}
+
+/* Os três pilares */
+.pillars {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+  margin: 35px 0;
+}
+.pillar {
+  padding: 22px;
+  border: 1px solid #d9b87966;
+  border-radius: 9px;
+  background: #ffffff07;
+}
+.pillar h3 {
+  margin-top: 0;
+  font-size: 1.15rem;
+}
+
+/* Teia dos projetos */
+.project-web {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+  margin: 35px 0;
+}
+.project-group {
+  padding: 25px;
+  border: 1px solid #d9b87966;
+  border-radius: 10px;
+  background: #ffffff07;
+}
+.project-group h3 {
+  margin-top: 0;
+  font-size: 1.25rem;
+}
+.project-group .group-intro {
+  color: var(--muted);
+  font-size: .9rem;
+  line-height: 1.7;
+}
+.project-item {
+  padding: 13px 0;
+  border-top: 1px solid #ffffff18;
+}
+.project-item a {
+  color: var(--gold);
+  font-weight: bold;
+  text-decoration: none;
+}
+.project-item a:hover {
+  color: var(--rose);
+}
+.project-item p {
+  color: var(--muted);
+  font-size: .9rem;
+  margin: 5px 0 0;
+  line-height: 1.6;
+}
+.project-web .full-width {
+  grid-column: 1 / -1;
+}
+
+/* Encerramento */
+.article-ending {
+  margin-top: 65px;
+  padding: 35px 28px;
+  border: 1px solid #d9b87988;
+  border-radius: 12px;
+  text-align: center;
+  background: linear-gradient(145deg, #d9b87914, #ffffff05);
+}
+.article-ending h2 {
+  margin-top: 0;
+}
+.article-ending p {
+  color: var(--muted);
+}
+.article-ending .signature {
+  color: var(--gold);
+  font-family: Georgia, 'Times New Roman', serif;
+  font-style: italic;
+  font-size: 1.2rem;
+  margin-top: 25px;
+}
+.article-navigation {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-top: 45px;
+  padding-top: 25px;
+  border-top: 1px solid #d9b87944;
+}
+.article-navigation a {
+  color: var(--gold);
+  text-decoration: none;
+}
+.article-navigation a:hover {
+  color: var(--rose);
+}
+
+@media(max-width:700px) {
+  .cherry-section,
+  .pillars,
+  .project-web {
+    grid-template-columns: 1fr;
+  }
+  .project-web .full-width {
+    grid-column: auto;
+  }
+  .article-hero {
+    padding: 55px 20px 40px;
+  }
+}
+@media(max-width:520px) {
+  .project-dropdown .dropdown-list {
+    right: -55px;
+    min-width: 210px;
+  }
+  .article-layout {
+    padding: 0 20px;
+  }
+  .article-body blockquote {
+    padding: 18px;
+    font-size: 1.1rem;
+  }
+  .article-navigation {
+    flex-direction: column;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<div class="petals" aria-hidden="true"></div>
+
+<header>
+  <div class="wrap">
+    <nav>
+      <a class="brand" href="index.html#inicio" aria-label="Faith Expanse - Início">
+        <img class="site-logo" src="logo%20(Faith%20Expanse).png" alt="Faith Expanse">
+      </a>
+
+      <div class="links">
+        <a href="index.html#inicio">Início</a>
+
+        <details class="project-dropdown">
+          <summary>Projetos</summary>
+          <div class="dropdown-list">
+            <a href="manga.html">Mangá</a>
+            <a href="amaxia.html">AMAXIA</a>
+            <a href="literatura.html">Literatura</a>
+            <a href="contrastride.html">ContraStride</a>
+            <a href="entrelinhas.html">Entrelinhas</a>
+            <a href="diario.html">Diário de uma Cristã</a>
+            <a href="igreja.html">Igreja</a>
+            <a href="jogo.html">Jogo</a>
+            <a href="arte.html">Arte e Poesias</a>
+            <a href="missoes.html">Missões pelo Mundo</a>
+            <a href="historia.html">Jardim Secreto</a>
+            <a href="amelpia.html">AmelpIA</a>
+          </div>
+        </details>
+
+        <a href="blog.html#inicio">Blog</a>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+<section class="article-hero">
+  <div class="eyebrow">Filosofia Faith Expanse · Tempo e existência</div>
+
+  <h1>O Tempo Não Passa</h1>
+
+  <p class="subtitle">
+    O Amor que Revela o Sentido da Existência
+  </p>
+
+  <p class="intro">
+    Entre a pétala que cai, o fruto que amadurece, o relógio que conta
+    os dias e o infinito que nos convida a olhar além dos limites,
+    existe uma pergunta: se o tempo é aquilo que medimos, o que é
+    aquilo que verdadeiramente vivemos?
+  </p>
+
+  <div class="article-meta">
+    FAITH EXPANSE · UMA REFLEXÃO SOBRE A VIDA, A FÉ E O AMOR
+  </div>
+</section>
+
+<div class="article-layout">
+<article class="article-body">
+
+<h2>1. O tempo não passa. Nós é que passamos por ele.</h2>
+
+<p>
+Estamos acostumados a dizer que o tempo passa. Dizemos que os anos
+voam, que os dias demoram, que o tempo cura, que o tempo leva e que
+o tempo traz. Construímos relógios, calendários e instrumentos para
+acompanhar seus movimentos.
+</p>
+
+<p>
+Mas existe outra maneira de olhar para essa experiência:
+<strong>o tempo não passa, nós é que passamos por ele.</strong>
+</p>
+
+<p>
+O relógio marca uma sequência. O calendário organiza os dias.
+O ponteiro percorre o mostrador e os números mudam. Mas a nossa
+existência não é apenas uma sucessão de números. É aquilo que
+acontece enquanto estamos aqui.
+</p>
+
+<p>
+Uma hora pode parecer longa quando esperamos por uma notícia e
+curta quando estamos envolvidos em algo significativo. Um ano pode
+ser lembrado por um único encontro, uma decisão, uma descoberta ou
+uma transformação.
+</p>
+
+<p>
+O relógio mede intervalos. A memória guarda experiências.
+A consciência atribui significado ao que vivemos.
+</p>
+
+<p>
+Por isso, talvez a pergunta mais importante não seja quanto tempo
+passou, mas o que fizemos com o tempo que tivemos.
+</p>
+
+<blockquote>
+O tempo não passa. Nós atravessamos a existência, deixando nela
+marcas que podem desaparecer da memória dos relógios, mas permanecer
+no significado das nossas escolhas.
+</blockquote>
+
+<h2>2. O relógio, a contagem dos dias e o valor de existir</h2>
+
+<p>
+O relógio é uma das invenções mais importantes da humanidade.
+Ele permite organizar compromissos, observar ciclos, combinar
+encontros e compreender a passagem dos dias.
+</p>
+
+<p>
+Mas há uma diferença entre <strong>contar o tempo</strong> e
+<strong>dar sentido ao tempo</strong>.
+</p>
+
+<p>
+Podemos acompanhar cada minuto sem perceber o que acontece ao nosso
+redor. Também podemos viver um momento simples e descobrir nele
+um significado que levaremos conosco durante muitos anos.
+</p>
+
+<p>
+O relógio responde: que horas são?
+O calendário responde: que dia é hoje?
+Mas nenhuma dessas ferramentas responde sozinha:
+o que estamos fazendo com a nossa existência?
+</p>
+
+<h3>Aprender a contar os dias</h3>
+
+<p>
+No Salmo 90:12, encontramos uma oração atribuída a Moisés:
+</p>
+
+<blockquote>
+“Ensina-nos a contar os nossos dias, para que alcancemos coração sábio.”
+</blockquote>
+
+<p>
+A passagem não precisa ser entendida como um convite a viver
+observando o relógio ou a sentir ansiedade diante dos anos.
+Ela nos chama a reconhecer que a vida é limitada e que, por isso,
+nossas escolhas merecem sabedoria.
+</p>
+
+<p>
+Contar os dias, nesse sentido, é perceber que cada um deles oferece
+uma oportunidade de aprender, construir, servir, amar e amadurecer.
+Não significa controlar o futuro, mas viver o presente com
+responsabilidade.
+</p>
+
+<p>
+O relógio pode nos dizer que uma hora terminou. A sabedoria nos ajuda
+a perguntar se aquela hora foi vivida com propósito.
+</p>
+
+<h2>3. Josué: quando o Sol pareceu parar</h2>
+
+<p>
+Existe uma passagem bíblica especialmente interessante para esta
+reflexão: Josué 10:12–14.
+</p>
+
+<p>
+Nesse relato, Josué faz uma declaração diante do povo de Israel,
+pedindo que o Sol se detenha sobre Gibeão e a Lua sobre o vale de
+Aijalom. O texto bíblico descreve que o Sol se deteve e que aquele
+dia foi extraordinário.
+</p>
+
+<p>
+É uma narrativa que nos leva a pensar sobre a relação entre o tempo,
+os movimentos celestes e a experiência humana.
+</p>
+
+<p>
+Durante séculos, a humanidade utilizou o movimento aparente do Sol
+para organizar o dia. A luz da manhã, o meio-dia e o pôr do Sol
+ajudaram a estabelecer referências para a vida cotidiana.
+</p>
+
+<p>
+Por isso, quando a narrativa de Josué apresenta o Sol e a Lua
+detidos, ela utiliza justamente dois dos grandes marcadores naturais
+pelos quais as pessoas reconheciam a passagem do dia.
+</p>
+
+<h3>O que essa passagem nos faz refletir?</h3>
+
+<p>
+É importante distinguir a narrativa bíblica de uma explicação
+científica sobre o movimento dos corpos celestes. O texto apresenta
+um acontecimento extraordinário dentro de sua perspectiva religiosa;
+não é, por si só, uma demonstração científica de que o tempo físico
+tenha sido interrompido.
+</p>
+
+<p>
+Ainda assim, podemos fazer uma reflexão filosófica a partir dele:
+se os sinais pelos quais contamos o dia fossem alterados, nossa
+experiência do tempo também seria profundamente questionada.
+</p>
+
+<p>
+O Sol é uma referência para medir o dia, mas a existência humana
+não se resume à posição do Sol no céu.
+</p>
+
+<p>
+A passagem de Josué nos convida a pensar em algo maior do que os
+ponteiros: a relação entre a vida, o propósito e aquilo que fazemos
+diante das circunstâncias.
+</p>
+
+<blockquote>
+Talvez não possamos controlar o movimento dos dias, mas podemos
+escolher o significado que damos à nossa caminhada.
+</blockquote>
+
+<h2>4. Entre a pétala e o fruto: a dança do tempo na cerejeira</h2>
+
+<p>
+A natureza oferece uma das imagens mais bonitas para compreender
+a existência: a cerejeira.
+</p>
+
+<p>
+Existem cerejeiras conhecidas por sua floração ornamental e outras
+cultivadas por seus frutos. Embora pertençam ao universo das
+cerejeiras, elas nos apresentam imagens diferentes e complementares.
+</p>
+
+<p>
+Uma nos chama a contemplar a beleza do florescimento. A outra nos
+convida a observar o amadurecimento e a colheita.
+</p>
+
+<p>
+É dessa diferença que nasce uma metáfora para a vida.
+</p>
+
+<div class="cherry-section">
+
+  <div class="cherry-card">
+    <div class="symbol">🌸</div>
+    <h3>A cerejeira das pétalas</h3>
+
+    <p>
+      A cerejeira ornamental floresce e transforma a paisagem.
+      Suas pétalas rosadas podem cair e formar uma espécie de
+      neve delicada sobre o chão.
+    </p>
+
+    <p>
+      Ela representa simbolicamente o florescimento, a juventude,
+      a delicadeza, a beleza do instante e aquilo que precisa ser
+      contemplado enquanto está diante de nós.
+    </p>
+
+    <p>
+      Na nossa metáfora, a pétala representa o momento que não
+      podemos segurar para sempre, mas que podemos aprender
+      a valorizar.
+    </p>
+  </div>
+
+  <div class="cherry-card fruit">
+    <div class="symbol">🍒</div>
+    <h3>A cerejeira dos frutos</h3>
+
+    <p>
+      A cerejeira frutífera nos mostra outro estágio da natureza:
+      a transformação que acontece ao longo das estações até
+      que o fruto amadureça.
+    </p>
+
+    <p>
+      Ela representa simbolicamente a maturidade, a paciência,
+      a construção, a continuidade e aquilo que pode alimentar
+      outras vidas.
+    </p>
+
+    <p>
+      Na nossa metáfora, o fruto representa o resultado de um
+      processo que não aconteceu de uma só vez.
+    </p>
+  </div>
+
+</div>
+
+<h3>Dois símbolos, uma história completa</h3>
+
+<p>
+Na construção poética dessa reflexão, a cerejeira das flores pode
+representar uma expressão simbólica feminina, associada à delicadeza,
+ao florescimento e à beleza do instante. A cerejeira dos frutos pode
+representar uma expressão simbólica masculina, associada à maturação,
+à sustentação e à continuidade.
+</p>
+
+<p>
+Essas associações são escolhas simbólicas e poéticas, não definições
+sobre mulheres e homens. A delicadeza, a força, a capacidade de
+cuidar e a capacidade de construir pertencem a todas as pessoas.
+</p>
+
+<p>
+O mais importante é compreender que as duas imagens não competem.
+Elas se complementam.
+</p>
+
+<p>
+A flor não é inferior ao fruto por cair. O fruto não é superior à
+flor por permanecer por mais tempo. Cada um representa uma etapa
+diferente de uma mesma experiência natural.
+</p>
+
+<p>
+A flor nos ensina a contemplar. O fruto nos ensina a reconhecer
+o amadurecimento. Uma nos lembra a beleza do presente; o outro,
+a importância daquilo que construímos.
+</p>
+
+<div class="article-highlight">
+  <p>
+    A pétala representa a beleza do instante.
+    O fruto representa a transformação que amadurece.
+    Juntos, revelam a riqueza de uma existência inteira.
+  </p>
+</div>
+
+<h3>A queda da pétala não é o fim da história</h3>
+
+<p>
+Quando uma pétala cai, podemos pensar que sua beleza terminou.
+Mas a árvore continua participando dos ciclos da natureza.
+A queda faz parte de um processo maior.
+</p>
+
+<p>
+Da mesma maneira, nem tudo o que termina perde seu significado.
+Uma fase pode acabar e ainda assim ter contribuído para aquilo
+que nos tornamos. Uma experiência pode ser breve e deixar uma
+marca duradoura.
+</p>
+
+<p>
+A vida não é feita apenas de permanência. Também é feita de
+transformações.
+</p>
+
+<p>
+E talvez seja justamente isso que a cerejeira nos ensina:
+não precisamos escolher entre apreciar a flor e valorizar o fruto.
+Precisamos aprender a reconhecer a importância de cada etapa.
+</p>
+
+<h2>5. O infinito: quando a existência deixa de ser uma linha</h2>
+
+<p>
+Se o relógio organiza o tempo em sequência, o símbolo do infinito
+nos oferece outra imagem: a continuidade.
+</p>
+
+<p>
+O sinal do infinito, representado por uma curva que retorna sobre
+si mesma, é uma figura matemática associada à ideia de algo sem
+limite finito. Visualmente, ele parece não ter começo nem fim.
+</p>
+
+<p>
+Quando utilizado como símbolo artístico, também pode representar
+conexão, continuidade, encontro, renovação e possibilidades.
+</p>
+
+<p>
+É nesse sentido simbólico que o infinito se conecta à reflexão
+sobre a existência.
+</p>
+
+<p>
+Uma vida pode ser compreendida como uma sequência de momentos,
+mas o significado de uma experiência não precisa terminar no
+instante em que ela acontece.
+</p>
+
+<p>
+Uma palavra pode transformar alguém. Uma atitude pode inspirar
+outra atitude. Um ensinamento pode atravessar gerações.
+Uma criação pode continuar comunicando algo mesmo depois que
+seu criador já não está presente.
+</p>
+
+<p>
+Assim, o infinito não precisa ser entendido como a duração
+ilimitada de uma vida humana. Ele pode representar a continuidade
+dos significados, das relações e das possibilidades que uma
+existência coloca em movimento.
+</p>
+
+<h3>O infinito e a completude</h3>
+
+<p>
+Existe uma diferença entre infinito e completude.
+</p>
+
+<p>
+O infinito sugere ausência de limite. A completude sugere integração:
+elementos diferentes que, juntos, formam uma unidade significativa.
+</p>
+
+<p>
+Uma história pode ser completa mesmo sem conter todas as
+possibilidades do universo. Uma música pode terminar e ainda
+deixar uma sensação de plenitude. Uma experiência pode chegar
+ao fim e continuar fazendo parte de quem a viveu.
+</p>
+
+<p>
+É essa ideia de integração que também encontramos na identidade
+de AMAXIA.
+</p>
+
+<h2>6. AMAXIA: duas histórias, um infinito de possibilidades</h2>
+
+<p>
+AMAXIA é mais do que o nome de um álbum. É uma composição de
+significados.
+</p>
+
+<p>
+O nome une três elementos:
+</p>
+
+<ul class="article-list">
+  <li><strong>AMA:</strong> Ana.</li>
+  <li><strong>MAX:</strong> Max.</li>
+  <li><strong>IA:</strong> inteligência artificial, imaginação e criação.</li>
+</ul>
+
+<p>
+A união dessas partes representa um encontro entre duas histórias
+e um universo de possibilidades criativas.
+</p>
+
+<p>
+A identidade visual do projeto utiliza o símbolo do infinito
+em vermelho e dourado, cores que também participam de uma
+composição de contrastes, encontros e continuidade.
+</p>
+
+<p>
+O símbolo não representa apenas uma ideia de duração. Ele
+representa a possibilidade de conectar elementos diferentes
+em uma mesma criação.
+</p>
+
+<p>
+A própria música faz isso: transforma lembranças, sentimentos,
+ideias e experiências em uma obra que pode ser compartilhada.
+</p>
+
+<h3>As sete músicas como etapas de uma jornada</h3>
+
+<p>
+As sete faixas de AMAXIA podem ser compreendidas como capítulos
+de uma narrativa sobre a existência e as diferentes formas de amar.
+</p>
+
+<ol class="article-list">
+  <li>
+    <strong>Do Outro Lado do Rio</strong><br>
+    A promessa, a espera e o reconhecimento. Uma história sobre
+    aquilo que permanece na memória e ganha significado ao longo
+    da caminhada.
+  </li>
+
+  <li>
+    <strong>A Linguagem do Meu Coração</strong><br>
+    O encontro e a comunicação que ultrapassa as palavras.
+    Nem tudo o que sentimos consegue ser explicado por uma frase.
+  </li>
+
+  <li>
+    <strong>Confiança</strong><br>
+    A importância da verdade, da responsabilidade e das escolhas
+    conscientes nas relações.
+  </li>
+
+  <li>
+    <strong>Beijo do Dragão</strong><br>
+    O cuidado e a descoberta de que receber atenção também faz
+    parte da experiência de amar.
+  </li>
+
+  <li>
+    <strong>Impossívia</strong><br>
+    A coragem de procurar caminhos quando algo parece impossível.
+    A assinatura que representa a esperança do projeto.
+  </li>
+
+  <li>
+    <strong>Escolhi Amar</strong><br>
+    A liberdade de escolher, reconhecendo que amar não significa
+    deixar de existir como indivíduo.
+  </li>
+
+  <li>
+    <strong>Menino Confuso</strong><br>
+    A ternura de olhar para além das aparências e reconhecer
+    a humanidade que existe por trás das defesas.
+  </li>
+</ol>
+
+<p>
+As sete músicas não são apenas sete momentos isolados.
+Elas formam uma sequência de experiências que se relacionam:
+promessa, reconhecimento, verdade, cuidado, coragem, liberdade
+e ternura.
+</p>
+
+<p>
+A jornada mostra que o amor não é uma única sensação.
+Ele envolve decisões, responsabilidade, respeito, aprendizado
+e amadurecimento.
+</p>
+
+<p>
+AMAXIA encontra, assim, uma ligação natural com a cerejeira:
+a beleza de um instante pode dar origem a uma criação que
+continua produzindo significado.
+</p>
+
+<p>
+Uma canção termina, mas aquilo que ela desperta pode continuar.
+</p>
+
+<p>
+Conheça também o <a class="article-link" href="amaxia.html">projeto AMAXIA</a>
+e sua história musical.
+</p>
+
+<h2>7. A fé é a prova de amor</h2>
+
+<p>
+Depois de observar o relógio, a passagem bíblica de Josué,
+a contagem dos dias, as cerejeiras e o símbolo do infinito,
+chegamos a uma questão central: o que dá sentido à existência?
+</p>
+
+<p>
+Para Faith Expanse, uma das respostas está na relação entre
+fé e amor.
+</p>
+
+<p>
+A fé não precisa permanecer apenas no campo das palavras.
+Ela pode se manifestar na maneira como vivemos, nas escolhas
+que fazemos e no modo como tratamos as pessoas.
+</p>
+
+<p>
+Em Tiago 2:17, encontramos a reflexão de que a fé sem obras
+é morta. Em 1 Coríntios 13, o amor é apresentado como essencial,
+acima de muitas demonstrações e capacidades.
+</p>
+
+<p>
+Essas passagens nos ajudam a compreender que a fé não deve
+ser apenas declarada: ela também precisa encontrar expressão
+na vida.
+</p>
+
+<h3>Três dimensões da fé</h3>
+
+<div class="pillars">
+
+  <div class="pillar">
+    <h3>Fé em Deus</h3>
+    <p>
+      É reconhecer Deus como fonte de amor, orientação e
+      ensinamento. É procurar viver de acordo com os princípios
+      que aprendemos na fé cristã.
+    </p>
+  </div>
+
+  <div class="pillar">
+    <h3>Fé em você</h3>
+    <p>
+      É reconhecer o valor da vida que recebeu, desenvolver
+      suas capacidades, descobrir talentos e assumir
+      responsabilidade pelas próprias escolhas.
+    </p>
+  </div>
+
+  <div class="pillar">
+    <h3>Fé no próximo</h3>
+    <p>
+      É reconhecer o valor das outras pessoas e transformar
+      o amor em respeito, empatia, cuidado, solidariedade
+      e serviço.
+    </p>
+  </div>
+
+</div>
+
+<p>
+Essas três dimensões não precisam ser vividas separadamente.
+Elas se relacionam.
+</p>
+
+<p>
+A fé em Deus orienta nossos valores. A fé em nós mesmos nos
+ajuda a desenvolver aquilo que recebemos. A fé no próximo
+nos leva a compartilhar o que somos e podemos oferecer.
+</p>
+
+<p>
+Quando essas dimensões se encontram, a fé deixa de ser apenas
+uma ideia individual e passa a produzir consequências na vida.
+</p>
+
+<div class="article-highlight">
+  <p>
+    Porque o amor dá sentido à fé, e a fé encontra no amor
+    sua expressão.
+  </p>
+  <small>Inspirado em Tiago 2:17 e 1 Coríntios 13.</small>
+</div>
+
+<h2>8. Faith Expanse: uma teia de doze projetos</h2>
+
+<p>
+É aqui que todas as ideias anteriores se encontram.
+</p>
+
+<p>
+Faith Expanse não foi concebido como um conjunto de projetos
+sem relação entre si. Sua proposta é construir uma rede de
+expressões criativas que se conectam por meio de três dimensões:
+fé em Deus, fé em você e fé no próximo.
+</p>
+
+<p>
+São doze projetos, organizados em três pilares. Cada um possui
+sua própria linguagem, mas todos podem participar de uma mesma
+reflexão sobre a existência.
+</p>
+
+<p>
+A teia não é uma sequência obrigatória. Não é necessário passar
+por um projeto para chegar a outro. Ela representa a possibilidade
+de diferentes caminhos conduzirem a perguntas semelhantes:
+quem somos, no que acreditamos, o que criamos e o que oferecemos
+ao mundo?
+</p>
+
+<h3>Primeiro fio: fé em Deus</h3>
+
+<div class="project-web">
+
+  <div class="project-group full-width">
+    <p class="group-intro">
+      O primeiro pilar reúne projetos que aproximam a criação,
+      a reflexão e a experiência humana da fé cristã.
+    </p>
+
+    <div class="project-item">
+      <a href="diario.html">1. Diário de uma Cristã</a>
+      <p>
+        Um espaço para reflexões sobre a caminhada cristã,
+        experiências de fé, aprendizados e a relação cotidiana
+        com Deus. A fé também é construída nos dias comuns.
+      </p>
+    </div>
+
+    <div class="project-item">
+      <a href="literatura.html">2. Literatura</a>
+      <p>
+        A palavra escrita permite desenvolver ideias, narrativas
+        e reflexões. A literatura pode transformar experiências
+        em histórias e perguntas em caminhos de descoberta.
+      </p>
+    </div>
+
+    <div class="project-item">
+      <a href="jogo.html">3. Jogo</a>
+      <p>
+        A linguagem dos jogos pode transformar aprendizado,
+        estratégia e participação em experiências interativas.
+        É uma maneira de aproximar pessoas de ideias por meio
+        da descoberta e da atividade.
+      </p>
+    </div>
+
+    <div class="project-item">
+      <a href="entrelinhas.html">4. Entrelinhas</a>
+      <p>
+        Um convite a observar o que nem sempre está explícito:
+        significados, interpretações, sentimentos e mensagens
+        que aparecem por trás das palavras e acontecimentos.
+      </p>
+    </div>
+  </div>
+
+  <div class="project-group full-width">
+    <h3>Segundo fio: fé em você</h3>
+    <p class="group-intro">
+      O segundo pilar olha para a identidade, a criatividade,
+      o desenvolvimento pessoal e a capacidade de reconhecer
+      o próprio valor.
+    </p>
+
+    <div class="project-item">
+      <a href="amaxia.html">5. AMAXIA</a>
+      <p>
+        Um encontro entre música, histórias e criação.
+        Representa a possibilidade de transformar experiências
+        em arte e conectar duas histórias em um universo
+        de possibilidades.
+      </p>
+    </div>
+
+    <div class="project-item">
+      <a href="historia.html">6. Jardim Secreto</a>
+      <p>
+        Um espaço reservado à reflexão e ao diálogo sobre
+        questões humanas e emocionais. Simboliza o cuidado
+        com aquilo que existe dentro de nós e que merece
+        ser acolhido com respeito.
+      </p>
+    </div>
+
+    <div class="project-item">
+      <a href="amelpia.html">7. AmelpIA</a>
+      <p>
+        Um projeto que aproxima criatividade e inteligência
+        artificial. Representa a exploração de novas
+        possibilidades de criação e o uso responsável
+        de ferramentas tecnológicas.
+      </p>
+    </div>
+
+    <div class="project-item">
+      <a href="arte.html">8. Arte e Poesias</a>
+      <p>
+        A arte transforma percepções em imagens, formas,
+        palavras e símbolos. A poesia permite expressar
+        aquilo que nem sempre conseguimos explicar
+        de maneira direta.
+      </p>
+    </div>
+  </div>
+
+  <div class="project-group full-width">
+    <h3>Terceiro fio: fé no próximo</h3>
+    <p class="group-intro">
+      O terceiro pilar leva a reflexão para além do indivíduo.
+      Ele trata da convivência, da contribuição, da comunidade
+      e do cuidado com outras pessoas.
+    </p>
+
+    <div class="project-item">
+      <a href="missoes.html">9. Missões pelo Mundo</a>
+      <p>
+        Um olhar para a contribuição humana em diferentes
+        lugares e realidades. Representa a fé que se movimenta
+        em direção ao outro por meio do serviço e da solidariedade.
+      </p>
+    </div>
+
+    <div class="project-item">
+      <a href="igreja.html">10. Igreja</a>
+      <p>
+        Um espaço relacionado à comunidade cristã, à comunhão,
+        à organização e à vivência coletiva da fé.
+        A fé também se desenvolve na convivência.
+      </p>
+    </div>
+
+    <div class="project-item">
+      <a href="manga.html">11. Mangá</a>
+      <p>
+        A narrativa visual permite abordar valores, conflitos,
+        escolhas e transformações por meio de personagens
+        e histórias. É uma linguagem capaz de alcançar
+        pessoas de diferentes idades e culturas.
+      </p>
+    </div>
+
+    <div class="project-item">
+      <a href="contrastride.html">12. ContraStride</a>
+      <p>
+        Um projeto que, pela própria ideia de seguir em direção
+        contrária, pode abrir espaço para questionar padrões,
+        repensar caminhos e refletir sobre escolhas.
+      </p>
+    </div>
+  </div>
+
+</div>
+
+<h3>Uma teia, não doze caminhos isolados</h3>
+
+<p>
+A literatura pode inspirar uma história em mangá. Uma história
+pode se transformar em jogo. Uma música pode despertar uma
+reflexão que encontra espaço no Diário de uma Cristã.
+Uma criação tecnológica pode colaborar com um projeto artístico.
+Uma reflexão pessoal pode motivar uma ação em benefício de outras
+pessoas.
+</p>
+
+<p>
+Da mesma forma, uma experiência vivida em comunidade pode
+inspirar uma obra literária, uma poesia ou uma missão.
+</p>
+
+<p>
+É assim que os doze projetos se conectam: não porque todos
+tenham a mesma função, mas porque podem participar de uma
+mesma visão de mundo.
+</p>
+
+<p>
+A fé em Deus oferece orientação. A fé em você reconhece
+potencial e responsabilidade. A fé no próximo transforma
+essa experiência em contribuição.
+</p>
+
+<p>
+Os três pilares formam uma estrutura. Os doze projetos
+são caminhos possíveis dentro dela. E o amor é o elemento
+que dá sentido à ligação entre todos.
+</p>
+
+<h2>9. A grande conexão: tempo, natureza, criação e amor</h2>
+
+<p>
+Agora podemos reunir os símbolos que apareceram ao longo
+desta reflexão.
+</p>
+
+<ul class="article-list">
+  <li>
+    <strong>O relógio</strong> representa a medida organizada
+    dos intervalos e a necessidade de reconhecer o valor
+    dos dias.
+  </li>
+
+  <li>
+    <strong>O Salmo 90:12</strong> nos lembra da importância
+    de contar os dias com sabedoria.
+  </li>
+
+  <li>
+    <strong>Josué 10:12–14</strong> apresenta uma narrativa
+    extraordinária sobre o Sol e a Lua, convidando-nos a
+    refletir sobre os marcadores naturais do dia e sobre
+    o propósito da existência.
+  </li>
+
+  <li>
+    <strong>A pétala</strong> representa a beleza do instante,
+    o florescimento e a necessidade de contemplar o presente.
+  </li>
+
+  <li>
+    <strong>O fruto</strong> representa o amadurecimento,
+    a transformação e aquilo que pode ser compartilhado.
+  </li>
+
+  <li>
+    <strong>O infinito</strong> representa continuidade,
+    conexão e possibilidades que ultrapassam um único momento.
+  </li>
+
+  <li>
+    <strong>AMAXIA</strong> representa a união de histórias
+    e a criação de algo novo a partir de elementos diferentes.
+  </li>
+
+  <li>
+    <strong>A fé</strong> oferece orientação para viver
+    com propósito.
+  </li>
+
+  <li>
+    <strong>O amor</strong> transforma aquilo em que acreditamos
+    em atitudes e escolhas.
+  </li>
+
+  <li>
+    <strong>Os doze projetos</strong> dão diferentes formas
+    de expressão a essa visão.
+  </li>
+</ul>
+
+<p>
+Perceba que nenhum desses elementos precisa substituir os outros.
+O relógio não é inimigo do infinito. A pétala não é inimiga
+do fruto. A fé não está separada da criação. A existência
+individual não precisa estar isolada da vida em comunidade.
+</p>
+
+<p>
+São perspectivas diferentes que podem se complementar.
+</p>
+
+<h2>10. O que permanece quando o momento termina?</h2>
+
+<p>
+Talvez a pergunta sobre o tempo nunca tenha sido apenas
+uma questão de relógios, calendários ou movimentos celestes.
+Talvez ela seja, sobretudo, uma pergunta sobre o significado
+da existência.
+</p>
+
+<p>
+O que fazemos com os dias que recebemos?
+O que construímos com nossas capacidades?
+Que marcas deixamos nas pessoas?
+O que ensinamos, compartilhamos e criamos?
+</p>
+
+<p>
+Uma pétala pode cair. Um fruto pode ser consumido. Uma música
+pode chegar ao último acorde. Um livro pode terminar sua última
+página. Um encontro pode dar lugar à distância.
+</p>
+
+<p>
+Mas o significado de uma experiência não precisa desaparecer
+junto com o momento em que ela aconteceu.
+</p>
+
+<p>
+Uma atitude de cuidado pode inspirar outra. Uma história pode
+ensinar alguém que ainda nem conhecemos. Uma criação pode
+despertar novas ideias. Uma palavra pode ajudar uma pessoa
+a enxergar uma possibilidade diferente.
+</p>
+
+<p>
+É nesse sentido que a existência pode produzir continuidade:
+não porque tudo permanece fisicamente igual, mas porque
+aquilo que fazemos pode participar de histórias maiores
+do que o instante em que agimos.
+</p>
+
+<p>
+A flor e o fruto pertencem à mesma natureza. O relógio e o
+calendário nos ajudam a organizar a vida. A Bíblia nos convida
+a refletir sobre a sabedoria dos dias. O infinito nos oferece
+uma imagem de continuidade. A arte transforma experiências
+em linguagem. E o amor dá sentido às escolhas.
+</p>
+
+<p>
+Faith Expanse reúne essas ideias em uma proposta:
+expandir a fé em Deus, em você e no próximo.
+</p>
+
+<div class="article-ending">
+  <h2>Impossívia, o impossível tem uma via.</h2>
+
+  <p>
+    Talvez não possamos guardar cada pétala, prolongar cada
+    instante ou conhecer todos os caminhos que ainda virão.
+    Mas podemos escolher como viver o presente, o que construir
+    durante nossa caminhada e o amor que colocamos em nossas ações.
+  </p>
+
+  <p>
+    A existência é feita de momentos. O sentido que damos a eles
+    nasce das nossas escolhas. E aquilo que compartilhamos pode
+    continuar florescendo na vida de outras pessoas.
+  </p>
+
+  <p>
+    Entre a pétala e o fruto, entre o relógio e o infinito,
+    entre a fé e o amor, existe uma jornada: a nossa existência.
+  </p>
+
+  <p class="signature">
+    A fé é a prova de amor.
+  </p>
+
+  <p>
+    Faith Expanse<br>
+    Expandindo a fé em Deus, em você e no próximo.
+  </p>
+</div>
+
+<div class="article-navigation">
+  <a href="blog.html">← Voltar ao Blog</a>
+  <a href="amaxia.html">Conhecer AMAXIA →</a>
+</div>
+
+</article>
+</div>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    Faith Expanse
+    <br>
+    Expandindo a fé, anunciando Jesus e revelando a glória de Deus por meio da arte.
+  </div>
+</footer>
+
+<script>
+(function(){
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  var box = document.querySelector('.petals');
+  var count = window.innerWidth < 700 ? 14 : 26;
+
+  for (var i = 0; i < count; i++) {
+    var p = document.createElement('span');
+    p.className = 'petal';
+    var size = 8 + Math.random() * 10;
+    p.style.left = (Math.random() * 100) + 'vw';
+    p.style.width = size + 'px';
+    p.style.height = (size * 0.8) + 'px';
+    p.style.animationDuration =
+      (12 + Math.random() * 14) + 's, ' +
+      (3 + Math.random() * 4) + 's';
+    p.style.animationDelay =
+      (-Math.random() * 26) + 's, ' +
+      (-Math.random() * 4) + 's';
+    p.style.opacity = (0.35 + Math.random() * 0.5).toFixed(2);
+    box.appendChild(p);
+  }
+})();
+</script>
+
+</body>
+</html>
