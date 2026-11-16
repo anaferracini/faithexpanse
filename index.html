@@ -137,8 +137,7 @@ main p {
   margin-bottom:20px;
 }
 
-/* OS TRÊS PILARES
-   Mantidos como estavam */
+/* OS TRÊS PILARES */
 
 .pillars-section {
   text-align:center;
@@ -201,70 +200,118 @@ main p {
   margin-top:20px;
 }
 
+/* PROJETOS DE CADA PILAR */
+
+.pillar-projects {
+  border-top:1px solid #d9b87955;
+  margin-top:24px;
+  padding-top:20px;
+}
+
+.pillar-projects h4 {
+  color:var(--gold);
+  font-family:Georgia,serif;
+  font-size:1rem;
+  font-weight:normal;
+  margin:0 0 13px;
+}
+
+.pillar-projects ul {
+  list-style:none;
+  margin:0;
+  padding:0;
+  display:grid;
+  gap:9px;
+}
+
+.pillar-projects li {
+  margin:0;
+  padding:0;
+}
+
+.pillar-projects a {
+  color:var(--cream);
+  text-decoration:none;
+  font-size:.95rem;
+  line-height:1.5;
+  transition:color .2s;
+}
+
+.pillar-projects a::before {
+  content:"›";
+  color:var(--rose);
+  margin-right:9px;
+}
+
+.pillar-projects a:hover {
+  color:var(--gold);
+  text-decoration:underline;
+}
+
 /* IMPOSSÍVIA */
 
 .impossivia-section {
-  text-align: center;
-  padding: 45px 0;
+  text-align:center;
+  padding:45px 0;
 }
 
 .impossivia-content {
-  max-width: 850px;
-  margin: 0 auto;
-  padding: 45px 35px;
-  border: 1px solid #d9b87977;
-  border-radius: 12px;
-  background: linear-gradient(145deg, #ffffff10, #ffffff04);
-  box-sizing: border-box;
-  text-align: center;
+  max-width:850px;
+  margin:0 auto;
+  padding:45px 35px;
+  border:1px solid #d9b87977;
+  border-radius:12px;
+  background:linear-gradient(145deg,#ffffff10,#ffffff04);
+  box-sizing:border-box;
+  text-align:center;
 }
 
 .impossivia-content .eyebrow {
-  color: var(--gold);
-  margin: 0 0 12px;
-  text-align: center;
-  line-height: 1.5;
+  color:var(--gold);
+  margin:0 0 12px;
+  text-align:center;
+  line-height:1.5;
 }
 
 .impossivia-content h2,
 .impossivia-title {
-  color: var(--gold);
-  font-family: Georgia, serif;
-  font-size: clamp(1.8rem, 4vw, 2.7rem);
-  font-style: italic;
-  line-height: 1.5;
-  margin: 0 0 18px;
-  text-align: center;
+  color:var(--gold);
+  font-family:Georgia,serif;
+  font-size:clamp(1.8rem,4vw,2.7rem);
+  font-style:italic;
+  line-height:1.5;
+  margin:0 0 18px;
+  text-align:center;
 }
 
 .impossivia-quote {
-  color: var(--gold);
-  font-family: Georgia, serif;
-  font-size: 1.25rem;
-  font-style: italic;
-  line-height: 1.6;
-  margin: 0 0 28px;
-  text-align: center;
+  color:var(--gold);
+  font-family:Georgia,serif;
+  font-size:1.25rem;
+  font-style:italic;
+  line-height:1.6;
+  margin:0 0 28px;
+  text-align:center;
 }
 
 .impossivia-content p {
-  color: var(--muted);
-  line-height: 1.9;
-  margin: 18px 0;
-  text-align: center;
+  color:var(--muted);
+  line-height:1.9;
+  margin:18px 0;
+  text-align:center;
 }
 
 .impossivia-content p:last-child {
-  margin-bottom: 0;
+  margin-bottom:0;
 }
 
-@media (max-width: 600px) {
+@media (max-width:600px) {
   .impossivia-section {
-    padding: 30px 0;
+    padding:30px 0;
   }
 
   .impossivia-content {
-    padding: 30px 22px;
+    padding:30px 22px;
   }
 }
 
@@ -469,6 +516,8 @@ main p {
 
       <div class="pillars-grid">
 
+        <!-- PILAR 1 -->
+
         <article class="pillar-card">
           <span class="pillar-number">01</span>
 
@@ -490,7 +539,19 @@ main p {
           <div class="pillar-highlight">
             Uma fé que aproxima, orienta e transforma.
           </div>
+
+          <div class="pillar-projects">
+            <h4>Projetos deste pilar</h4>
+            <ul>
+              <li><a href="diario.html">Diário de uma Cristã</a></li>
+              <li><a href="literatura.html">Literatura</a></li>
+              <li><a href="jogo.html">Jogo</a></li>
+              <li><a href="entrelinhas.html">Entrelinhas</a></li>
+            </ul>
+          </div>
         </article>
+
+        <!-- PILAR 2 -->
 
         <article class="pillar-card">
           <span class="pillar-number">02</span>
@@ -513,7 +574,19 @@ main p {
           <div class="pillar-highlight">
             Uma fé que fortalece, desenvolve e inspira.
           </div>
+
+          <div class="pillar-projects">
+            <h4>Projetos deste pilar</h4>
+            <ul>
+              <li><a href="amaxia.html">AMAXIA</a></li>
+              <li><a href="historia.html">Jardim Secreto</a></li>
+              <li><a href="amelpia.html">AmelpIA</a></li>
+              <li><a href="arte.html">Arte e Poesias</a></li>
+            </ul>
+          </div>
         </article>
+
+        <!-- PILAR 3 -->
 
         <article class="pillar-card">
           <span class="pillar-number">03</span>
@@ -535,6 +608,16 @@ main p {
           <div class="pillar-highlight">
             Uma fé que aproxima, acolhe e compartilha.
           </div>
+
+          <div class="pillar-projects">
+            <h4>Projetos deste pilar</h4>
+            <ul>
+              <li><a href="missoes.html">Missões pelo Mundo</a></li>
+              <li><a href="igreja.html">Igreja</a></li>
+              <li><a href="manga.html">Mangá</a></li>
+              <li><a href="contrastride.html">ContraStride</a></li>
+            </ul>
+          </div>
         </article>
 
       </div>
@@ -543,38 +626,38 @@ main p {
 
   <!-- IMPOSSÍVIA -->
 
- <section class="impossivia-section">
-  <div class="impossivia-content">
+  <section class="impossivia-section">
+    <div class="impossivia-content">
 
-    <p class="eyebrow">Nossa frase de assinatura</p>
+      <p class="eyebrow">Nossa frase de assinatura</p>
 
-    <h2>Impossívia</h2>
+      <h2>Impossívia</h2>
 
-    <p class="impossivia-quote">
-      “O impossível tem uma via.”
-    </p>
+      <p class="impossivia-quote">
+        “O impossível tem uma via.”
+      </p>
 
-    <p>
-      Impossívia representa a ideia de que aquilo que parece impossível
-      pode revelar caminhos que ainda não conseguimos enxergar.
-    </p>
+      <p>
+        Impossívia representa a ideia de que aquilo que parece impossível
+        pode revelar caminhos que ainda não conseguimos enxergar.
+      </p>
 
-    <p>
-      Nem sempre sabemos como chegar a determinado destino. Algumas
-      respostas ainda não existem para nós, algumas possibilidades
-      permanecem desconhecidas e alguns caminhos exigem paciência,
-      aprendizado, coragem e perseverança.
-    </p>
+      <p>
+        Nem sempre sabemos como chegar a determinado destino. Algumas
+        respostas ainda não existem para nós, algumas possibilidades
+        permanecem desconhecidas e alguns caminhos exigem paciência,
+        aprendizado, coragem e perseverança.
+      </p>
 
-    <p>
-      A proposta não é ignorar as dificuldades nem prometer que tudo
-      acontecerá exatamente como desejamos. É cultivar a esperança,
-      buscar alternativas e permanecer abertos às possibilidades que
-      podem surgir ao longo da jornada.
-    </p>
+      <p>
+        A proposta não é ignorar as dificuldades nem prometer que tudo
+        acontecerá exatamente como desejamos. É cultivar a esperança,
+        buscar alternativas e permanecer abertos às possibilidades que
+        podem surgir ao longo da jornada.
+      </p>
 
-  </div>
-</section>
+    </div>
+  </section>
 
   <!-- NOSSA ESSÊNCIA -->
 
