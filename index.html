@@ -204,37 +204,75 @@ main p {
 /* IMPOSSÍVIA */
 
 .impossivia-section {
-  text-align:left;
+  text-align: left;
+  padding: 45px 0;
 }
 
 .impossivia-content {
-  max-width:850px;
-  margin:0;
-  padding:45px 35px;
-  border:1px solid #d9b87977;
-  border-radius:12px;
-  background:linear-gradient(145deg,#ffffff10,#ffffff04);
+  max-width: 850px;
+  margin: 0;
+  padding: 45px 35px;
+  border: 1px solid #d9b87977;
+  border-radius: 12px;
+  background: linear-gradient(145deg, #ffffff10, #ffffff04);
+  box-sizing: border-box;
+}
+
+.impossivia-content .eyebrow {
+  color: var(--gold);
+  margin: 0 0 12px;
+  text-align: left;
+  line-height: 1.5;
 }
 
 .impossivia-content h2 {
-  text-align:left;
+  color: var(--cream);
+  font-family: Georgia, serif;
+  font-size: clamp(1.8rem, 4vw, 2.7rem);
+  line-height: 1.3;
+  margin: 0 0 12px;
+  text-align: left;
 }
 
 .impossivia-title {
-  color:var(--gold);
-  font-family:Georgia,serif;
-  font-size:clamp(1.8rem,4vw,2.7rem);
-  font-style:italic;
-  line-height:1.5;
-  margin:20px 0;
-  text-align:left;
+  color: var(--gold);
+  font-family: Georgia, serif;
+  font-size: clamp(1.8rem, 4vw, 2.7rem);
+  font-style: italic;
+  line-height: 1.5;
+  margin: 0 0 12px;
+  text-align: left;
+}
+
+.impossivia-quote {
+  color: var(--gold);
+  font-family: Georgia, serif;
+  font-size: 1.25rem;
+  font-style: italic;
+  line-height: 1.6;
+  margin: 0 0 28px;
+  text-align: left;
 }
 
 .impossivia-content p {
-  color:var(--muted);
-  line-height:1.9;
-  margin:18px 0;
-  text-align:left;
+  color: var(--muted);
+  line-height: 1.9;
+  margin: 0 0 18px;
+  text-align: left;
+}
+
+.impossivia-content p:last-child {
+  margin-bottom: 0;
+}
+
+@media (max-width: 600px) {
+  .impossivia-section {
+    padding: 30px 0;
+  }
+
+  .impossivia-content {
+    padding: 30px 22px;
+  }
 }
 
 /* NOSSA ESSÊNCIA */
@@ -512,41 +550,38 @@ main p {
 
   <!-- IMPOSSÍVIA -->
 
-  <section id="impossivia" class="impossivia-section">
-    <div class="wrap">
+ <section class="impossivia-section">
+  <div class="impossivia-content">
 
-      <div class="eyebrow">Nossa frase de assinatura</div>
+    <p class="eyebrow">Nossa frase de assinatura</p>
 
-      <div class="impossivia-content">
+    <h2>Impossívia</h2>
 
-        <h2>Impossívia</h2>
+    <p class="impossivia-quote">
+      “O impossível tem uma via.”
+    </p>
 
-        <div class="impossivia-title">
-          O impossível tem uma via.
-        </div>
+    <p>
+      Impossívia representa a ideia de que aquilo que parece impossível
+      pode revelar caminhos que ainda não conseguimos enxergar.
+    </p>
 
-        <p>
-          Impossívia representa a ideia de que aquilo que parece impossível
-          pode revelar caminhos que ainda não conseguimos enxergar.
-        </p>
+    <p>
+      Nem sempre sabemos como chegar a determinado destino. Algumas
+      respostas ainda não existem para nós, algumas possibilidades
+      permanecem desconhecidas e alguns caminhos exigem paciência,
+      aprendizado, coragem e perseverança.
+    </p>
 
-        <p>
-          Nem sempre sabemos como chegar a determinado destino. Algumas
-          respostas ainda não existem para nós, algumas possibilidades
-          permanecem desconhecidas e alguns caminhos exigem paciência,
-          aprendizado, coragem e perseverança.
-        </p>
+    <p>
+      A proposta não é ignorar as dificuldades nem prometer que tudo
+      acontecerá exatamente como desejamos. É cultivar a esperança,
+      buscar alternativas e permanecer abertos às possibilidades que
+      podem surgir ao longo da jornada.
+    </p>
 
-        <p>
-          A proposta não é ignorar as dificuldades nem prometer que tudo
-          acontecerá exatamente como desejamos. É cultivar a esperança,
-          buscar alternativas e permanecer abertos às possibilidades
-          que podem surgir ao longo da jornada.
-        </p>
-
-      </div>
-    </div>
-  </section>
+  </div>
+</section>
 
   <!-- NOSSA ESSÊNCIA -->
 
@@ -611,14 +646,6 @@ main p {
           acreditar e compartilhar algo bom com o mundo.
         </p>
 
-        <p class="closing-signature">
-          Expandindo a fé em Deus, em você e no próximo.
-        </p>
-
-        <p class="impossivia-title">
-          Impossívia, o impossível tem uma via.
-        </p>
-
       </div>
     </div>
   </section>
@@ -630,8 +657,6 @@ main p {
     Faith Expanse
     <br>
     Expandindo a fé em Deus, em você e no próximo.
-    <br>
-    Impossívia, o impossível tem uma via.
   </div>
 </footer>
 
