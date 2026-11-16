@@ -1,10 +1,11 @@
+
 <!doctype html>
 <html lang="pt-BR">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="theme-color" content="#0b1020">
-<meta name="description" content="Blog Faith Expanse — Reflexões sobre fé, espera e promessa.">
+<meta name="description" content="Blog Faith Expanse — Reflexões sobre fé, amor, tempo, criatividade e existência.">
 <title>BLOG | Faith Expanse</title>
 <link rel="stylesheet" href="css/style.css">
 
@@ -183,6 +184,45 @@
   margin: 45px auto;
   font-family: Georgia, 'Times New Roman', serif;
 }
+
+/* Link para o artigo completo */
+.article-link {
+  display: inline-block;
+  margin-top: 10px;
+  color: var(--gold);
+  font-weight: bold;
+  text-decoration: none;
+  transition: color .2s;
+}
+.article-link:hover {
+  color: var(--rose);
+  text-decoration: underline;
+}
+
+/* Destaque do artigo principal */
+.featured-post {
+  border-color: #d9b879aa;
+  background: linear-gradient(145deg, #d9b87918, #ffffff05);
+}
+.featured-post > summary {
+  padding: 30px;
+}
+.featured-post h2 {
+  font-family: Georgia, 'Times New Roman', serif;
+  color: var(--gold);
+  font-size: 2rem;
+  letter-spacing: 1px;
+}
+.featured-post .post-subtitle {
+  font-size: 1.3rem;
+}
+.featured-label {
+  color: var(--rose);
+  font-size: .8rem;
+  letter-spacing: 2px;
+  font-weight: bold;
+}
+
 @media(max-width:520px) {
   .project-dropdown .dropdown-list {
     right: -55px;
@@ -193,6 +233,12 @@
   }
   .post-content {
     padding: 5px 20px 25px;
+  }
+  .featured-post > summary {
+    padding: 22px;
+  }
+  .featured-post h2 {
+    font-size: 1.7rem;
   }
 }
 </style>
@@ -225,7 +271,7 @@
             <a href="jogo.html">Jogo</a>
             <a href="arte.html">Arte e Poesias</a>
             <a href="missoes.html">Missões pelo Mundo</a>
-            <a href="historia.html">História de A. Q. Ferracini</a>
+            <a href="historia.html">Jardim Secreto</a>
             <a href="amelpia.html">AmelpIA</a>
           </div>
         </details>
@@ -242,9 +288,11 @@
     <div class="hero-copy blog-intro">
       <div class="eyebrow">Blog · Diário de fé</div>
       <h1>BLOG</h1>
-      <p class="tagline">Palavras sobre fé, espera e promessa</p>
+      <p class="tagline">Reflexões sobre fé, amor, tempo e existência</p>
       <p class="lead blog-description">
-        Reflexões de A. Q. Ferracini sobre a história real por trás de Faith Expanse e do álbum AMAXIA — e sobre a fé que abre caminho onde parecia não haver nenhum.
+        Reflexões sobre a fé, o amor, a criatividade e os acontecimentos
+        que nos convidam a enxergar a vida por diferentes perspectivas.
+        Um espaço para compartilhar ideias, experiências e significados.
       </p>
     </div>
   </section>
@@ -253,6 +301,59 @@
     <div class="wrap">
 
       <div class="posts">
+
+        <!-- ARTIGO EM DESTAQUE -->
+        <details class="post-card featured-post" open>
+          <summary>
+            <span class="featured-label">ARTIGO EM DESTAQUE · FILOSOFIA FAITH EXPANSE</span>
+            <h2>O TEMPO NÃO PASSA</h2>
+            <div class="post-subtitle">
+              O Amor que Revela o Sentido da Existência
+            </div>
+            <p class="post-excerpt">
+              Entre a pétala que cai, o fruto que amadurece e a fé que
+              se transforma em amor, uma reflexão sobre o tempo, a
+              existência e aquilo que realmente permanece.
+            </p>
+          </summary>
+
+          <article class="post-content">
+            <p>
+              Será que o tempo realmente passa ou somos nós que
+              atravessamos a existência? A natureza, a fé e o amor
+              oferecem diferentes perspectivas para refletirmos
+              sobre essa pergunta.
+            </p>
+
+            <p>
+              A delicadeza das pétalas de uma cerejeira ornamental
+              e a maturidade dos frutos de uma cerejeira frutífera
+              representam momentos diferentes da vida: o florescimento,
+              a transformação e aquilo que construímos ao longo da jornada.
+            </p>
+
+            <p>
+              Essa reflexão também se conecta à história de AMAXIA,
+              à simbologia da cerejeira e à compreensão de que a fé
+              encontra no amor uma de suas expressões mais profundas.
+            </p>
+
+            <blockquote>
+              O tempo não passa, nós é que passamos por ele.
+            </blockquote>
+
+            <p>
+              Uma reflexão sobre a existência, as escolhas, a fé em Deus,
+              a fé em nós mesmos e a fé no próximo.
+            </p>
+
+            <p>
+              <a href="filosofia.html" class="article-link">
+                Ler o artigo completo →
+              </a>
+            </p>
+          </article>
+        </details>
 
         <!-- PUBLICAÇÃO I -->
         <details class="post-card">
