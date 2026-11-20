@@ -1,1 +1,672 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#0b1020">
+<meta name="description" content="A trajetória de A. Q. Ferracini — uma história de promessa, sofrimento, missão, música e reconhecimento.">
+<title>Trajetória de A. Q. Ferracini | Faith Expanse</title>
+<link rel="stylesheet" href="css/style.css">
 
+<style>
+.site-logo {
+  display:block;
+  width:150px;
+  max-width:38vw;
+  height:auto;
+  object-fit:contain;
+}
+
+.project-dropdown { position:relative; }
+.project-dropdown summary { list-style:none; cursor:pointer; }
+.project-dropdown summary::-webkit-details-marker { display:none; }
+.project-dropdown summary::after {
+  content:"⌄";
+  display:inline-block;
+  margin-left:7px;
+  transition:transform .2s;
+}
+.project-dropdown[open] summary::after { transform:rotate(180deg); }
+
+.project-dropdown .dropdown-list {
+  position:absolute;
+  top:calc(100% + 12px);
+  right:0;
+  z-index:1000;
+  min-width:230px;
+  padding:10px;
+  display:grid;
+  gap:3px;
+  background:#17213b;
+  border:1px solid #d9b87988;
+  border-radius:9px;
+  box-shadow:0 12px 30px #0008;
+}
+
+.project-dropdown .dropdown-list a {
+  display:block;
+  padding:10px 12px;
+  color:var(--cream);
+  text-decoration:none;
+  border-radius:5px;
+}
+.project-dropdown .dropdown-list a:hover {
+  color:var(--gold);
+  background:#ffffff10;
+}
+
+.trajectory-hero {
+  max-width:950px;
+  margin:55px auto 25px;
+  text-align:center;
+}
+.trajectory-hero h1 {
+  color:var(--gold);
+  font-family:Georgia,'Times New Roman',serif;
+  font-size:clamp(2rem,5vw,3.4rem);
+  line-height:1.2;
+  text-align:center;
+}
+.trajectory-hero .subtitle {
+  color:var(--rose);
+  font-family:Georgia,serif;
+  font-style:italic;
+  font-size:clamp(1rem,2.5vw,1.25rem);
+  text-align:center;
+}
+
+.trajectory-content {
+  max-width:900px;
+  margin:0 auto 70px;
+  padding:35px;
+  border:1px solid #d9b87966;
+  border-radius:12px;
+  background:linear-gradient(145deg,#ffffff0d,#ffffff04);
+  color:var(--cream);
+  line-height:1.9;
+}
+.trajectory-content h1 {
+  color:var(--gold);
+  font-family:Georgia,serif;
+  font-size:1.8rem;
+  line-height:1.35;
+  margin:0 0 15px;
+}
+.trajectory-content h2 {
+  color:var(--gold);
+  font-family:Georgia,serif;
+  font-size:1.45rem;
+  line-height:1.4;
+  margin:42px 0 15px;
+  padding-top:10px;
+}
+.trajectory-content h3 {
+  color:var(--rose);
+  font-family:Georgia,serif;
+  font-size:1.15rem;
+  margin:30px 0 12px;
+}
+.trajectory-content p {
+  color:var(--muted);
+  line-height:1.9;
+  margin:15px 0;
+}
+.trajectory-content strong { color:var(--cream); }
+.trajectory-content a {
+  color:var(--gold);
+  text-decoration:underline;
+}
+.trajectory-content a:hover { color:var(--rose); }
+.trajectory-content ul,
+.trajectory-content ol {
+  padding-left:26px;
+  color:var(--muted);
+}
+.trajectory-content li {
+  margin:9px 0;
+  line-height:1.8;
+}
+.trajectory-content blockquote {
+  margin:22px 0;
+  padding:15px 20px;
+  border-left:3px solid var(--rose);
+  color:var(--cream);
+  font-family:Georgia,serif;
+  font-style:italic;
+  background:#ffffff08;
+}
+.trajectory-divider {
+  border:0;
+  border-top:1px solid #d9b87955;
+  margin:38px 0;
+}
+.trajectory-footer-note {
+  text-align:center;
+  color:var(--muted);
+  margin:40px auto 55px;
+  font-family:Georgia,serif;
+}
+
+@media(max-width:700px) {
+  .trajectory-content { padding:24px 20px; }
+}
+@media(max-width:520px) {
+  .project-dropdown .dropdown-list {
+    right:-55px;
+    min-width:210px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<div class="petals" aria-hidden="true"></div>
+
+<header>
+  <div class="wrap">
+    <nav>
+      <a class="brand" href="index.html#inicio" aria-label="Faith Expanse - Início">
+        <img class="site-logo" src="logo%20(Faith%20Expanse).png" alt="Faith Expanse">
+      </a>
+
+      <div class="links">
+        <a href="index.html#inicio">Início</a>
+        <a href="filosofia.html">Filosofia</a>
+
+        <details class="project-dropdown">
+          <summary>Projetos</summary>
+          <div class="dropdown-list">
+            <a href="manga.html">Mangá</a>
+            <a href="amaxia.html">AMAXIA</a>
+            <a href="literatura.html">Literatura</a>
+            <a href="contrastride.html">ContraStride</a>
+            <a href="entrelinhas.html">Entrelinhas</a>
+            <a href="diario.html">Diário de uma Cristã</a>
+            <a href="igreja.html">Igreja</a>
+            <a href="jogo.html">Jogo</a>
+            <a href="arte.html">Arte e Poesias</a>
+            <a href="missoes.html">Missões pelo Mundo</a>
+            <a href="historia.html">Jardim Secreto</a>
+            <a href="amelpia.html">AmelpIA</a>
+          </div>
+        </details>
+
+        <a href="trajetoria.html">Trajetória de A. Q. Ferracini</a>
+        <a href="blog.html#inicio">Blog</a>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+<section class="wrap trajectory-hero">
+  <div class="eyebrow">Faith Expanse · História e propósito</div>
+  <h1>Trajetória de A. Q. Ferracini</h1>
+  <p class="subtitle">Uma história de promessa, sofrimento, missão, música e reconhecimento</p>
+</section>
+
+<article class="trajectory-content">
+
+<h1>A TRAJETÓRIA DE A. Q. FERRACINI</h1>
+<h2>Uma história de promessa, sofrimento, missão, música e reconhecimento</h2>
+
+<p>A história de A. Q. Ferracini atravessa décadas e reúne acontecimentos que, vistos separadamente, poderiam parecer não ter relação entre si. Uma mensagem recebida por sua mãe quando ela tinha apenas três anos, uma experiência no portão de casa aos nove, anos de sofrimento, projetos idealizados ainda na infância, um chamado missionário, encontros e sonhos relacionados a um rio, uma cirurgia que colocou em dúvida sua capacidade de voltar a andar e, finalmente, um encontro que trouxe um novo significado à música.</p>
+
+<p>Esta não é uma história sobre alguém que conhece todas as respostas. É sobre alguém que olha para trás, reconhece acontecimentos que considera cumprimento de promessas de Deus e continua descobrindo o significado de sua própria trajetória.</p>
+
+<h2>AOS 3 ANOS — A PRIMEIRA MENSAGEM SOBRE A MÚSICA</h2>
+
+<p>A história começa quando A. Q. Ferracini tinha apenas três anos.</p>
+<p>Naquela época, Deus falou com sua mãe e transmitiu uma mensagem a respeito da menina:</p>
+<p><strong>Deus:</strong> “Essa menina tem um propósito na música, mas o inimigo vai tentar impedir. Cuide bem dela.”</p>
+<p>A mensagem foi recebida pela mãe, que naquele momento ainda não tinha como compreender tudo o que aquelas palavras significariam no futuro.</p>
+<p>A menina tinha apenas três anos. Não havia iniciado uma carreira musical, não conhecia o caminho que percorreria e tampouco poderia imaginar quantos acontecimentos ainda viveria antes de compreender a relação entre sua história e a música.</p>
+<p>A orientação era clara: havia um propósito relacionado à música, mas também haveria obstáculos. A mãe recebeu a responsabilidade de cuidar dela.</p>
+<p>Durante muitos anos, essa mensagem permaneceu como parte da história familiar. Seu significado, porém, só começaria a ganhar uma nova dimensão quando A. Q. Ferracini conhecesse o homem do outro lado do rio.</p>
+
+<h2>DOS 5 AOS 10 ANOS — O SOFRIMENTO COMEÇA CEDO</h2>
+
+<p>A infância de A. Q. Ferracini foi marcada por sofrimento emocional desde muito cedo.</p>
+<p>Entre os cinco e os dez anos, ela enfrentou dificuldades profundas. Foi um período em que a dor ultrapassou aquilo que uma criança deveria ter de suportar. Nessa fase aconteceram a primeira experiência de ideação suicida e uma tentativa de suicídio.</p>
+<p>Não se deve transformar esse sofrimento em uma história bonita ou necessária. A dor não precisava ter acontecido para que A. Q. Ferracini tivesse valor ou para que existisse um propósito para sua vida.</p>
+<p>Mas esconder essa parte também seria apagar uma dimensão importante de sua trajetória.</p>
+<p>A história precisa reconhecer que, enquanto uma promessa sobre a música já havia sido transmitida à sua mãe, a menina enfrentava uma realidade emocional muito difícil.</p>
+
+<h2>AOS 6 ANOS — O DIÁRIO QUE PASSOU A EXISTIR NA MEMÓRIA</h2>
+
+<p>Aos seis anos, A. Q. Ferracini ganhou um diário.</p>
+<p>A ideia de ter um lugar onde pudesse escrever parecia uma oportunidade de registrar o que acontecia em sua vida. Entretanto, havia algo que a impedia de colocar tudo no papel: ela tinha medo de que alguém lesse seus escritos.</p>
+<p>Por isso, não registrava ali o sofrimento. Preferia escrever sobre as coisas boas que aconteciam.</p>
+<p>Mas percebeu algo que a desanimou: sempre que escrevia sobre alguma coisa boa, pouco tempo depois aquela experiência parecia se transformar em algo ruim.</p>
+<p>Com o passar do tempo, desistiu de escrever no diário físico.</p>
+<p>Mas não desistiu de registrar suas histórias.</p>
+<p>O diário passou a existir dentro de sua cabeça.</p>
+<p>A. Q. Ferracini começou a reescrever mentalmente as histórias bíblicas de uma maneira engraçada, criando versões que tornavam mais fácil lembrar dos acontecimentos e personagens. A imaginação se tornou uma maneira de guardar histórias sem precisar colocá-las no papel.</p>
+<p>Essa prática, que nunca chegou a ser escrita naquela época, permaneceu em sua memória.</p>
+<p>Muitos anos depois, essa lembrança daria origem ao projeto <a href="https://anaferracini.github.io/faithexpanse/diario.html" target="_blank" rel="noopener noreferrer"><strong>Diário de uma Cristã</strong></a>.</p>
+<p>O projeto busca apresentar essa etapa da infância, preservando muitas lembranças e a maneira particular como ela interpretava as histórias bíblicas. Não pretende reproduzir cada pensamento infantil de forma totalmente fiel, mas resgatar o espírito daquela menina que encontrava na imaginação uma maneira própria de compreender a fé.</p>
+
+<h2>AOS 7 ANOS — O ENCONTRO COM JESUS</h2>
+
+<p>Aos sete anos, aconteceu uma experiência que marcou profundamente A. Q. Ferracini.</p>
+<p>No dia de sua primeira ideação suicida, Jesus apareceu para ela em seu quarto.</p>
+<p>Esse acontecimento passou a ocupar um lugar importante em sua memória e também ajuda a compreender por que o diário mental e as histórias bíblicas se tornaram tão significativos durante a infância.</p>
+<p>A menina já havia descoberto que podia recontar as histórias da Bíblia de maneira divertida, guardar personagens e imaginar novas formas de compreender aquilo que lia ou conhecia.</p>
+<p>A experiência com Jesus acrescentou outra dimensão à sua relação com a fé.</p>
+<p>O <a href="https://anaferracini.github.io/faithexpanse/diario.html" target="_blank" rel="noopener noreferrer"><strong>Diário de uma Cristã</strong></a> resgata justamente esse universo: a maneira como uma criança pensava, lembrava, interpretava e encontrava referências nas histórias bíblicas enquanto vivia uma realidade que não conseguia compartilhar com facilidade.</p>
+<p>Para conhecer essa parte da trajetória, o leitor pode acessar o projeto e descobrir como A. Q. Ferracini pensava durante a infância.</p>
+
+<h2>AOS 9 ANOS — O MENINO CONFUSO NO PORTÃO</h2>
+
+<p>Aos nove anos, aconteceu uma experiência que permaneceria na memória de A. Q. Ferracini.</p>
+<p>Um anjo apareceu no portão de sua casa. Junto dele estava um homem jovem, que vivia longe.</p>
+<p>O anjo transmitiu a seguinte mensagem:</p>
+<p><strong>Anjo:</strong> “Espere, ele vai te achar. Ele vive longe, mas vai chegar.”</p>
+<p>O jovem que estava ao lado do anjo parecia muito confuso.</p>
+<p><strong>Jovem:</strong> Ele estava muito confuso, sem saber o que estava fazendo ou o que estava esperando.</p>
+<p>A. Q. Ferracini, por sua vez, estava com medo, mas também feliz diante daquela experiência.</p>
+<p>Havia ainda outra informação relacionada ao homem jovem, transmitida pelo anjo, mas essa parte da mensagem não será revelada agora. Ainda não é o momento de contar esse detalhe.</p>
+<p>O anjo não explicou quem era aquele homem, onde ele morava, quando chegaria ou por que deveria encontrá-la.</p>
+<p>A. Q. Ferracini ainda era criança. Não tinha como compreender o significado de uma experiência que só ganharia novas conexões muitos anos depois.</p>
+<p>O homem que estava junto ao anjo está associado à figura que, no universo de AMAXIA, é chamada de Menino Confuso.</p>
+<p>A mensagem tinha uma palavra central: espere.</p>
+<p>Mas não havia uma data. Não havia um mês. Não havia uma explicação sobre o que aconteceria depois.</p>
+<p>A menina cresceria carregando a lembrança daquela experiência.</p>
+
+<h2>DOS 11 AOS 21 ANOS — O PERÍODO MAIS DIFÍCIL</h2>
+
+<p>Entre os onze e os vinte e um anos, A. Q. Ferracini atravessou o período mais difícil de sua vida.</p>
+<p>O sofrimento físico e mental, que já havia começado na infância, tornou-se ainda mais intenso. Nessa segunda fase também houve ideação suicida e uma tentativa de suicídio.</p>
+<p>Foram anos de dificuldades profundas, que precisam ser tratados com seriedade e sem romantização. A história de A. Q. Ferracini não deve ser reduzida à dor, mas também não deve fingir que ela não existiu.</p>
+<p>Durante esse período, ela cantava na igreja, mas não gostava de cantar. Não conseguia viver a música nem encontrar sentido naquilo que fazia.</p>
+<p>A música já fazia parte de sua vida, mas a promessa recebida por sua mãe aos três anos ainda não havia se tornado compreensível para ela.</p>
+<p>Era possível cantar sem entender o motivo de cantar.</p>
+<p>Ao mesmo tempo, A. Q. Ferracini começou a imaginar projetos que pudessem ajudar outras pessoas. Algumas ideias surgiram de necessidades que ela própria conhecia: aprender, viajar, compreender sentimentos, encontrar formas de enfrentar dificuldades e descobrir possibilidades mesmo quando os recursos pareciam inexistentes.</p>
+
+<h3>AOS 11 ANOS — A IDEIA DE UM JOGO PARA A VIDA</h3>
+
+<p>Aos onze anos, A. Q. Ferracini observava seu irmão, que tinha apenas dois anos, jogando enquanto seus pais brigavam.</p>
+<p>Ela percebeu que o menino entrava no mundo do jogo e, naquele momento, não absorvia as dores que aconteciam ao redor.</p>
+<p>A experiência despertou uma ideia.</p>
+<p>E se existisse um jogo capaz de ajudar alguém a atravessar a própria vida, utilizando a fé, a esperança e o amor como fundamentos?</p>
+<p>Ela imaginou um jogo no qual o poder da palavra, unido à fé em Deus, pudesse gerar a capacidade de decidir; no qual a esperança em Deus e no futuro ajudasse a desenvolver a capacidade de continuar; e no qual o amor de Deus estivesse relacionado ao poder de frutificar.</p>
+<p>A ideia tinha três dimensões:</p>
+
+<ul>
+<li><strong>Palavra:</strong> a possibilidade de decidir e direcionar a própria caminhada.</li>
+<li><strong>Esperança:</strong> a confiança em Deus e no futuro.</li>
+<li><strong>Amor:</strong> a capacidade de frutificar e produzir algo bom.</li>
+</ul>
+
+<p>Naquela época, porém, A. Q. Ferracini não tinha conhecimentos de programação para transformar a ideia em um jogo digital.</p>
+<p>Então, passou a viver a própria vida como se fosse um jogo real, utilizando os princípios que havia imaginado.</p>
+<p>O projeto não desapareceu. Permaneceu como uma ideia que, muitos anos depois, poderia ser apresentada a outras pessoas.</p>
+<p>Assim surgiu o conceito do projeto <a href="https://anaferracini.github.io/faithexpanse/jogo.html" target="_blank" rel="noopener noreferrer"><strong>Jogo</strong></a>.</p>
+<p>Quem quiser conhecer essa proposta e compreender como A. Q. Ferracini imaginou transformar a vida em uma experiência de decisões, esperança e desenvolvimento poderá acessar a aba Jogo.</p>
+<p>E, para compreender o processo por meio de uma narrativa escrita, poderá conhecer os três livros da série <strong>Soprados</strong>, disponíveis na aba <a href="https://anaferracini.github.io/faithexpanse/literatura.html" target="_blank" rel="noopener noreferrer"><strong>Literatura</strong></a>.</p>
+
+<h3>AOS 17 ANOS — O SONHO DE APRENDER LÍNGUAS E CONHECER O MUNDO</h3>
+
+<p>Aos doze anos, A. Q. Ferracini queria aprender várias línguas e viajar.</p>
+<p>Naquela época, aprender um idioma e conhecer outros países pareciam possibilidades distantes. Ela não tinha dinheiro para pagar cursos, não tinha acesso a pessoas com quem pudesse conversar em outras línguas e também não dispunha de celular ou internet para estudar da maneira que gostaria.</p>
+<p>Mas começou a imaginar um futuro em que esse conhecimento pudesse ser acessível gratuitamente.</p>
+<p>Não queria apenas criar uma ferramenta para ensinar idiomas. Pensou em algo que permitisse aprender uma língua e, ao mesmo tempo, conhecer os pontos turísticos do país onde aquele idioma era falado.</p>
+<p>A proposta uniria educação, cultura e descoberta.</p>
+<p>A ideia nasceu de uma necessidade que ela própria conhecia: desejar aprender e explorar o mundo, mas não ter os recursos necessários para isso.</p>
+<p>Muitos anos depois, essa ideia se transformaria no projeto <a href="https://anaferracini.github.io/faithexpanse/amelpia.html" target="_blank" rel="noopener noreferrer"><strong>AmelpIA</strong></a>, um aplicativo criado para ajudar pessoas a aprender idiomas enquanto conhecem lugares e pontos turísticos dos países relacionados à língua estudada.</p>
+<p>O sonho de uma menina que queria viajar e aprender sem depender de cursos caros ganhou a forma de um projeto que busca tornar o aprendizado mais acessível.</p>
+
+<h3>AOS 18 ANOS — A POESIA COMO CÓDIGO DOS SENTIMENTOS</h3>
+
+<p>Durante os anos de sofrimento, A. Q. Ferracini também descobriu na poesia uma forma de expressão.</p>
+<p>Na escola, aprendeu que muitas pessoas têm dificuldade para interpretar poemas. Percebeu, então, que a poesia poderia funcionar como uma espécie de código: uma maneira de escrever seus sentimentos sem que outras pessoas compreendessem facilmente o que estava sendo dito.</p>
+<p>Começou a transformar suas experiências e seu sofrimento em poesias e reflexões.</p>
+<p>Alguns textos foram preservados. Outros se perderam. Parte do que não foi conservado no papel permaneceu em sua memória e pôde ser recuperada posteriormente.</p>
+<p>A poesia tornou-se uma linguagem particular, na qual sentimentos difíceis de explicar diretamente podiam encontrar uma forma de expressão.</p>
+<p>Hoje, o projeto <a href="https://anaferracini.github.io/faithexpanse/arte.html" target="_blank" rel="noopener noreferrer"><strong>Arte e Poesias</strong></a> reúne essa dimensão de sua trajetória, permitindo que A. Q. Ferracini finalmente traduza e compartilhe parte daquilo que, durante muito tempo, permaneceu escondido nas entrelinhas de seus textos.</p>
+
+<h2>AOS 22 ANOS — O CHAMADO PARA MISSÕES E A DESCOBERTA DE SUA DIREÇÃO</h2>
+
+<p>Aos vinte e dois anos, A. Q. Ferracini recebeu um chamado de Deus para realizar missões em todo o Brasil.</p>
+<p>Esse acontecimento marcou uma mudança importante em sua trajetória.</p>
+<p>A menina que, anos antes, havia recebido uma mensagem sobre alguém que vivia longe agora se via diante de uma missão que também a levaria a diferentes lugares.</p>
+<p>O chamado não era simplesmente uma viagem ou uma experiência pessoal. Representava uma direção espiritual: levar a mensagem do Evangelho, anunciar a salvação e o amor de Deus e alcançar pessoas em diferentes regiões do país.</p>
+<p>A partir daí, sua caminhada passou a incluir uma dimensão missionária cada vez mais presente.</p>
+<p>A promessa recebida na infância ainda não havia se revelado por completo. O encontro anunciado aos nove anos continuava sem data. Mas outra parte da vida de A. Q. Ferracini começava a ganhar forma.</p>
+<p>Ela estudou e se formou em várias áreas profissionais. Entretanto, em sua experiência de fé, percebeu que não desejava seguir aquelas profissões como seu caminho principal.</p>
+<p>A mensagem de Deus foi:</p>
+<p>“Não seguirá nenhuma, pois no seu interior você não quer essas coisas, quer viver para expandir a fé.”</p>
+<p>Foi nesse processo que A. Q. Ferracini compreendeu algo que considera essencial em sua identidade: havia recebido de Deus, ainda no ventre, o dom do amor.</p>
+<p>O chamado missionário passou a representar uma direção que reunia sua fé, seus projetos e o desejo de contribuir para a vida de outras pessoas.</p>
+<p>Essa experiência está registrada no projeto <a href="https://anaferracini.github.io/faithexpanse/missoes.html" target="_blank" rel="noopener noreferrer"><strong>Missões pelo Mundo</strong></a>.</p>
+
+<h2>AOS 23 ANOS — O PRIMEIRO SONHO DO RIO</h2>
+
+<p>Aos vinte e três anos, A. Q. Ferracini teve um sonho em que um rio separava duas pessoas.</p>
+<p>Ela estava de um lado, e o homem estava do outro.</p>
+<p>No sonho, ela o reconheceu.</p>
+<p>A imagem do rio tornou-se uma das representações mais importantes da história. Havia uma distância entre os dois, mas também havia reconhecimento.</p>
+<p>A experiência trouxe novamente à memória a figura do homem que aparecera no portão quando ela tinha nove anos.</p>
+<p>O rio se tornaria, mais tarde, o elemento central da primeira música do álbum AMAXIA: <strong>Do Outro Lado do Rio</strong>.</p>
+<p>Mas a história ainda não havia chegado ao encontro real.</p>
+
+<h2>AOS 24 ANOS — O SEGUNDO ENCONTRO NO RIO</h2>
+
+<p>Um ano depois, aos vinte e quatro anos, A. Q. Ferracini encontrou aquele homem novamente no rio.</p>
+<p>Dessa vez, porém, a experiência foi diferente.</p>
+<p>Não se tratava apenas de um sonho em que ela o reconhecia do outro lado. Agora, ela conversou com ele.</p>
+<p>Durante esse encontro, ele disse:</p>
+<p><strong>Homem:</strong> “Enquanto eu não ter, não serei. Pois não estarei contigo sem ter o meu querer.”</p>
+<p>Em seguida, transmitiu outra mensagem:</p>
+<p><strong>Homem:</strong> “Te acharei de novo.”</p>
+<p>Depois disso, foi embora.</p>
+<p>A frase deixou uma nova marca na história.</p>
+<p>Aos nove anos, o anjo havia dito que ele a encontraria. Aos vinte e três, ela o havia reconhecido no sonho do rio. Aos vinte e quatro, conversou com ele e ouviu que ele a encontraria de novo.</p>
+<p>A promessa da infância ganhava novos elementos, mas o encontro definitivo ainda não havia acontecido.</p>
+<p>A frase dita por ele também acrescentava uma dimensão própria à narrativa: a questão do querer, da decisão e do momento em que alguém está preparado para realizar aquilo que anuncia.</p>
+<p>A. Q. Ferracini continuava sem saber quando o encontro aconteceria na realidade.</p>
+
+<h2>AOS 27 ANOS — O ANÚNCIO DO COMEÇO DO MÊS E OS DOZE PROJETOS</h2>
+
+<p>Aos vinte e sete anos, uma nova mensagem relacionada ao encontro foi transmitida por um anjo.</p>
+<p>Dessa vez, a informação era que A. Q. Ferracini conheceria aquele homem no começo do mês.</p>
+<p>Mas havia uma particularidade: o anjo não disse qual mês.</p>
+<p><strong>Anjo:</strong> A. Q. Ferracini o conheceria no começo de um mês.</p>
+<p><strong>A. Q. Ferracini:</strong> “Mas qual mês?”</p>
+<p>Essa pergunta não recebeu uma resposta.</p>
+<p>Sem saber qual seria o mês, ela passou a esperar. Cada começo de mês poderia representar a possibilidade do encontro anunciado.</p>
+<p>Havia doze meses de possibilidades. Um mês para cada ideia.</p>
+<p>Foi dessa reflexão que surgiu a relação com os doze projetos do Faith Expanse.</p>
+<p>Doze caminhos na Terra e um caminho para o céu: a eternidade ao lado de Deus.</p>
+<p>Doze projetos, doze possibilidades de contribuir com o mundo e uma esperança que aponta para além da existência terrena.</p>
+<p>A soma tornou-se o número treze:</p>
+<p><strong>12 + 1 = 13.</strong></p>
+<p>Essa concepção deu origem ao nome do mangá: <strong>Treze Céus</strong>.</p>
+<p>A história é baseada em experiências de A. Q. Ferracini e apresentada pela perspectiva de Erian, o vigilante que mantém a fé ativa.</p>
+<p>O projeto pode ser conhecido na aba <a href="https://anaferracini.github.io/faithexpanse/manga.html" target="_blank" rel="noopener noreferrer"><strong>Mangá</strong></a>.</p>
+<p>Para quem deseja compreender melhor essa história, a proposta é acompanhar Erian e descobrir como a fé, a vigilância e os treze céus se relacionam com a experiência humana.</p>
+<p>Aos vinte e sete anos, portanto, a espera ganhou uma representação que ultrapassava o encontro com uma pessoa. Ela passou a se relacionar também com uma visão de doze caminhos de atuação no mundo e uma esperança voltada à eternidade.</p>
+
+<h2>AOS 29 ANOS — JARDIM SECRETO: TRANSFORMAR A EXPERIÊNCIA EM ACOLHIMENTO</h2>
+
+<p>Aos vinte e nove anos, A. Q. Ferracini se formou em Psicologia.</p>
+<p>Ao olhar para sua própria história, começou a perceber uma possibilidade de transformar aquilo que havia aprendido com suas experiências em uma forma de ajudar pessoas que vivem ou viveram situações semelhantes.</p>
+<p>Ela passou a refletir sobre como muitas pessoas carregam dores em segredo, sem conseguir falar sobre elas ou encontrar um espaço em que possam ser acolhidas.</p>
+<p>Dessa reflexão nasceu o conceito de <strong>Jardim Secreto</strong>.</p>
+<p>O nome representa justamente esse universo interior: um lugar onde sentimentos, experiências e dores podem permanecer escondidos, mesmo quando a vida continua acontecendo do lado de fora.</p>
+<p>Mas o jardim não existe apenas para guardar segredos. Também representa a possibilidade de cultivar algo novo.</p>
+<p>A proposta é criar uma comunidade em que as pessoas possam conversar, compartilhar experiências e encontrar acolhimento e apoio psicológico.</p>
+<p>A ideia central é que, mesmo quando alguém viveu dores em segredo, ainda pode construir um novo decreto para orientar sua vida em um tempo chamado perpétuo.</p>
+<p>O decreto representa uma nova direção, uma decisão que pode influenciar o modo como a pessoa conduz sua história dali em diante.</p>
+<p>Assim surgiu o projeto <a href="https://anaferracini.github.io/faithexpanse/historia.html" target="_blank" rel="noopener noreferrer"><strong>Jardim Secreto</strong></a>.</p>
+<p>A proposta é transformar experiências pessoais em possibilidades de acolhimento, diálogo e reconstrução, sem reduzir ninguém àquilo que viveu.</p>
+
+<h2>AOS 30 ANOS — A MISSÃO PELO BRASIL E A CIRURGIA</h2>
+
+<p>Aos trinta anos, A. Q. Ferracini já havia percorrido todo o Brasil em sua missão.</p>
+<p>A caminhada missionária havia alcançado diferentes regiões do país. Aquilo que começara como um chamado aos vinte e dois anos havia se transformado em uma experiência concreta de deslocamento, trabalho e anúncio do Evangelho.</p>
+<p>Mas, durante essa fase, aconteceu um episódio que mudaria temporariamente seus planos.</p>
+<p>A. Q. Ferracini caiu e fraturou o fêmur na altura do quadril.</p>
+<p>A situação exigiu uma cirurgia, e a possibilidade de voltar a andar tornou-se uma preocupação real.</p>
+<p>Em 3 de agosto de 2024, aconteceu a cirurgia.</p>
+<p>Na experiência que relata, Deus apareceu para A. Q. Ferracini e disse que realizaria aquela cirurgia. Ela viu o dedo de Deus e recebeu a mensagem:</p>
+<p><strong>Deus:</strong> “Você vai voltar a andar.”</p>
+<p>O médico havia alertado que existia a possibilidade de ela não voltar a andar depois da cirurgia.</p>
+<p>Para alguém cuja missão envolvia viajar, caminhar e alcançar pessoas em diferentes lugares, aquela possibilidade tinha um significado especialmente difícil.</p>
+<p>Mas A. Q. Ferracini se apegava à sua fé e às promessas que havia recebido.</p>
+<p>Ela relata que Deus já havia mostrado em sonho que o Brasil tinha visto a Sua luz através dela e que, depois daquela etapa, ela iria para fora do país.</p>
+<p>No dia seguinte à cirurgia, em 4 de agosto de 2024, ela voltou para casa.</p>
+<p>Começou então um processo de recuperação que exigiu sete meses de fisioterapia para voltar a andar. A recuperação não aconteceu de uma hora para outra. Foram meses de dedicação, adaptação e persistência.</p>
+<p>A missão, entretanto, não havia terminado.</p>
+
+<h2>DURANTE A RECUPERAÇÃO — A VISÃO DO ANJO E A UNÇÃO DOS PÉS</h2>
+
+<p>No primeiro mês de recuperação, enquanto estava deitada na cama, aconteceu outra experiência que A. Q. Ferracini considera marcante.</p>
+<p>Ela piscou e, diante dela, perto dos seus pés, apareceu um anjo.</p>
+<p>Segundo seu relato, não foi um sonho. Ela afirma que estava acordada e que viu o anjo em uma visão.</p>
+<p>O anjo havia vindo cumprir algo a mando de Deus. Trazia um óleo para ungir seus pés.</p>
+<p>Ele se apresentou e explicou o motivo de sua presença:</p>
+<p><strong>Anjo:</strong> “Eu estou aqui para ungir seus pés, pois você vai seguir os passos de Paulo e pregar o evangelho de salvação e amor pelo mundo.”</p>
+<p>A mensagem anunciava uma missão que ultrapassaria as fronteiras do Brasil.</p>
+<p>A. Q. Ferracini, porém, olhou para a própria condição naquele momento. Estava em recuperação, havia passado por uma cirurgia no fêmur e ainda não conseguia andar normalmente.</p>
+<p>Então respondeu:</p>
+<p><strong>A. Q. Ferracini:</strong> “Mas eu não posso andar.”</p>
+<p>O anjo riu e respondeu:</p>
+<p><strong>Anjo:</strong> “Mas vai!”</p>
+<p>Depois disso, foi embora.</p>
+<p>A experiência tornou-se uma referência importante para a etapa seguinte da trajetória.</p>
+<p>A mensagem não dizia apenas que ela voltaria a andar. Relacionava a recuperação a uma missão: levar o Evangelho da salvação e do amor pelo mundo, seguindo os passos de Paulo.</p>
+<p>Para A. Q. Ferracini, aquela visão reforçava a convicção de que a cirurgia e a recuperação não seriam o fim de sua caminhada missionária.</p>
+
+<h3>O LIVRO MELANNY — A HERDEIRA DO SOL: PROFECIA SUPREMA</h3>
+
+<p>Durante essa época, A. Q. Ferracini também terminou seu livro <strong>Melanny — A Herdeira do Sol: Profecia Suprema</strong>.</p>
+<p>A história nasceu de um sonho. Ao acordar, ela começou a escrever e desenvolveu uma narrativa de fantasia e ficção científica voltada à expansão da fé.</p>
+<p>O livro reúne elementos de aventura, imaginação e espiritualidade, construindo um universo próprio para transmitir reflexões sobre fé e propósito.</p>
+<p>A obra foi publicada com o selo Faith Expanse, assim como o site e os projetos que fazem parte desse universo.</p>
+<p>Quem desejar conhecer a história de Melanny poderá acessar a aba <a href="https://anaferracini.github.io/faithexpanse/literatura.html" target="_blank" rel="noopener noreferrer"><strong>Literatura</strong></a> e encontrar o link para o livro.</p>
+
+<h2>AOS 32 ANOS — A MISSÃO PARA ALÉM DO BRASIL</h2>
+
+<p>Aos trinta e dois anos, depois de sua trajetória missionária pelo Brasil e do processo de recuperação, A. Q. Ferracini escreveu o livro <strong>Soprado para Falar — O Poder da Palavra do Administrador Cristão</strong>.</p>
+<p>A obra reflete sobre a palavra professada com fé e sobre a responsabilidade de compreender o poder daquilo que se declara e administra.</p>
+<p>O livro apresenta uma reflexão sobre como a palavra, quando conduzida pela fé e pela responsabilidade, pode influenciar decisões e acontecimentos.</p>
+<p>Para conhecer a obra, o leitor poderá acessar a aba <a href="https://anaferracini.github.io/faithexpanse/literatura.html" target="_blank" rel="noopener noreferrer"><strong>Literatura</strong></a>.</p>
+<p>Depois, A. Q. Ferracini chegou a uma nova etapa: saiu do país e percorreu seis países da América do Sul, de uma forma que considera milagrosa e provida por Deus.</p>
+<p>Essa experiência também está registrada no projeto <a href="https://anaferracini.github.io/faithexpanse/missoes.html" target="_blank" rel="noopener noreferrer"><strong>Missões pelo Mundo</strong></a>.</p>
+<p>A missão que havia começado no Brasil agora ultrapassava as fronteiras nacionais.</p>
+<p>A experiência também representava uma resposta à mensagem recebida durante a recuperação, quando o anjo havia anunciado que ela voltaria a andar e que pregaria o Evangelho pelo mundo.</p>
+<p>Inspirada na maneira como Paulo se comunicava com as comunidades, A. Q. Ferracini também escreveu cartas em espanhol e as entregou durante sua missão.</p>
+<p>Foi em um desses países da América do Sul que aconteceu o encontro com o homem do outro lado do rio.</p>
+<p>E há uma coincidência de datas que, para A. Q. Ferracini, possui um significado especial.</p>
+<p>O encontro aconteceu em <strong>3 de agosto de 2026</strong>, exatamente dois anos depois da cirurgia realizada em 3 de agosto de 2024 e da experiência que, durante a recuperação, havia reforçado a promessa de que ela voltaria a andar.</p>
+<p>Também aconteceu no começo do mês, como o anjo havia anunciado aos vinte e sete anos.</p>
+<p>Aos nove anos, a mensagem havia sido:</p>
+<p><strong>Anjo:</strong> “Espere, ele vai te achar. Ele vive longe, mas vai chegar.”</p>
+<p>Aos vinte e quatro, ele havia dito:</p>
+<p><strong>Homem:</strong> “Te acharei de novo.”</p>
+<p>Aos vinte e sete, o anjo havia anunciado o começo de um mês, sem revelar qual.</p>
+<p>Aos trinta e dois, no dia 3 de agosto, durante uma missão em outro país, o encontro finalmente aconteceu.</p>
+<p>O homem que durante tantos anos esteve associado às experiências do portão e do rio agora fazia parte de sua história real.</p>
+<p>E, quando o encontrou, A. Q. Ferracini sentiu que seu coração finalmente o reconheceu.</p>
+
+
+<h2>AOS 33 ANOS — AMAXIA: DUAS HISTÓRIAS, UM INFINITO DE POSSIBILIDADES</h2>
+
+<p>O encontro com o homem do outro lado do rio também deu origem a um dos projetos mais pessoais de A. Q. Ferracini: <strong>AMAXIA</strong>.</p>
+<p>A ideia central do projeto:</p>
+Deus ensina a amá-lo em primeiro lugar, pois Ele dará a base para amar a si mesmo e ao próximo. Pois o amor do mundo sempre espera algo em troca, mas o amor de Deus nos preenche para amar sem esperar nada, e sim, apenas dar.
+
+<h3>AMAXIA — UMA HISTÓRIA QUE CONTINUA</h3>
+  
+<p>O álbum AMAXIA reúne sete músicas. Cada uma representa uma dimensão dessa experiência, trazendo sentimentos, descobertas, reflexões e aprendizados que passaram a fazer parte da trajetória de A. Q. Ferracini.</p>
+<p>As sete músicas não representam apenas uma sequência de acontecimentos. Elas formam uma narrativa de reconhecimento, comunicação, confiança, cuidado, possibilidade, liberdade e compreensão.</p>
+
+<p>O projeto também representa a maneira como A. Q. Ferracini começou a compreender que aquele encontro não estava relacionado somente à promessa antiga sobre o homem que vivia longe. Ele também trouxe ensinamentos que mudaram sua maneira de enxergar o amor por si mesma, a música, os sentimentos e o próprio sentido de sua existência.</p>
+
+<p>O projeto pode ser conhecido na aba <a href="https://anaferracini.github.io/faithexpanse/amaxia.html" target="_blank" rel="noopener noreferrer"><strong>AMAXIA</strong></a>, onde o álbum e sua identidade podem ser apresentados ao público.</p>
+
+<p>Mas a história não está encerrada. Assim como o símbolo do infinito, o significado desse encontro continua aberto a novas descobertas.</p>
+
+<h2>IGREJA: SER AQUILO QUE JESUS ENSINOU</h2>
+<p>Depois de conhecer o homem do outro lado do rio, A. Q. Ferracini percebeu que ele tinha um conflito com as igrejas.</p>
+<p>Ele enxergava muitas situações que considerava erradas dentro das instituições religiosas. Uma das experiências que o marcaram envolvia uma amiga que passava por dificuldades, mas não recebeu o apoio que precisava do pastor nem de outras pessoas que se apresentavam como igreja.</p>
+<p>A situação despertou uma reflexão em A. Q. Ferracini.</p>
+<p>Se a igreja deve representar o amor de Cristo, por que tantas pessoas que precisam de ajuda não encontram apoio justamente entre aqueles que deveriam acolhê-las?</p>
+<p>A partir dessa reflexão, surgiu o projeto <strong>Igreja</strong>.</p>
+<p>A proposta é construir uma rede de apoio que ultrapasse a ideia de frequentar um espaço religioso. Ser igreja também significa estar presente na vida de alguém, ajudar quando existe necessidade e demonstrar o amor de Deus por meio de atitudes concretas.</p>
+<p>Essa rede poderá contar com diferentes formas de contribuição:</p>
+
+<ul>
+<li>Doação de alimentos.</li>
+<li>Ajuda financeira a quem precisa.</li>
+<li>Doação de sangue.</li>
+<li>Uma conversa e disponibilidade para ouvir.</li>
+<li>Um louvor oferecido como expressão de fé.</li>
+<li>Uma oração.</li>
+<li>Tempo, atenção e apoio em situações difíceis.</li>
+</ul>
+
+<p>A. Q. Ferracini gostaria que outras pessoas também participassem dessa construção. Não pretende que a iniciativa seja limitada a uma única pessoa, mas que diferentes pessoas possam se tornar parte dessa rede de cuidado.</p>
+<p>A imagem que orienta o projeto é a igreja cuja pedra angular é Jesus.</p>
+<p>Não se trata apenas de falar sobre amor, mas de construir uma comunidade em que esse amor possa ser percebido nas atitudes.</p>
+<p>Assim nasceu o projeto <a href="https://anaferracini.github.io/faithexpanse/igreja.html" target="_blank" rel="noopener noreferrer"><strong>Igreja</strong></a>.</p>
+<p>Quem sabe o leitor também possa participar e ajudar a construir essa rede?</p>
+
+<h2>ENTRELINHAS: A MÚSICA COMO HOMENAGEM À EXISTÊNCIA</h2>
+
+<p>Também aos trinta e três anos, A. Q. Ferracini começou a compreender melhor o sentido da música por meio dos ensinamentos do homem que havia encontrado.</p>
+<p>Durante muito tempo, cantar não fazia sentido para ela. Cantava na igreja, mas não conseguia compreender por que deveria fazer aquilo.</p>
+<p>Agora, começou a perceber uma dimensão diferente.</p>
+<p>A música não precisava existir apenas para expressar algo pessoal. Não era somente sobre ela, nem somente sobre seus próprios sentimentos.</p>
+<p>A música também poderia homenagear a existência de Deus, a existência de cada pessoa e a história de outros seres humanos.</p>
+<p>Ela passou a compreender a música como uma forma de verbalizar a graça por meio do amor, fazendo com que essa homenagem pudesse alcançar cada ouvido humano.</p>
+<p>Essa compreensão deu origem ao projeto <strong>Entrelinhas</strong>.</p>
+<p>A proposta é criar músicas que apresentem como personagens bíblicos homenagearam a Deus por meio de suas ações na Terra.</p>
+<p>Cada personagem carrega uma história, uma escolha, uma dificuldade e uma maneira particular de expressar sua fé.</p>
+<p>Mas o projeto não pretende manter essas histórias distantes do público. A ideia é mostrar como cada pessoa também pode se reconhecer em algum desses personagens em determinados momentos da vida.</p>
+<p>Assim, as músicas tornam-se uma maneira de lembrar as histórias bíblicas, refletir sobre a própria existência e homenagear a Deus cantando.</p>
+<p>O projeto <a href="https://anaferracini.github.io/faithexpanse/entrelinhas.html" target="_blank" rel="noopener noreferrer"><strong>Entrelinhas</strong></a> representa essa nova compreensão da música: não apenas uma expressão individual, mas uma homenagem que pode reunir Deus, a humanidade e as histórias que merecem ser lembradas.</p>
+
+<h2>CONTRASTRIDE: COMPREENDER PARA AMAR O PRÓXIMO</h2>
+
+<p>Outra reflexão que se transformou em projeto foi a necessidade de compreender melhor os sofrimentos psicológicos e as diferentes formas de funcionamento da mente humana.</p>
+<p>A. Q. Ferracini passou a pensar em como a música poderia ajudar as pessoas a reconhecer questões psicológicas, transtornos e neurodivergências que afetam indivíduos em diferentes lugares do mundo.</p>
+<p>Muitas vezes, alguém enfrenta um sofrimento que os outros não conseguem perceber. Em outras situações, comportamentos são julgados sem que as pessoas procurem compreender o que pode estar acontecendo por trás deles.</p>
+<p>A proposta do projeto <strong>ContraStride</strong> é utilizar a música para apresentar essas realidades e incentivar uma maneira mais consciente de olhar para o próximo.</p>
+<p>Cada música representa um quadro de sofrimento, um transtorno ou uma neurodivergência, buscando aproximar o público de experiências que muitas vezes são desconhecidas ou mal compreendidas.</p>
+<p>O objetivo não é transformar uma canção em diagnóstico, nem substituir o acompanhamento profissional. É utilizar a arte como uma ferramenta de informação, empatia e conscientização.</p>
+<p>A ideia central é simples: compreender melhor o que alguém vive pode nos ajudar a amar essa pessoa de maneira mais responsável.</p>
+<p>Assim surgiu <a href="https://anaferracini.github.io/faithexpanse/contrastride.html" target="_blank" rel="noopener noreferrer"><strong>ContraStride</strong></a>, um projeto musical que procura transformar conhecimento em empatia e empatia em atitudes de amor ao próximo.</p>
+
+<h2>QUANDO A MENSAGEM SOBRE A MÚSICA COMEÇOU A FAZER SENTIDO</h2>
+
+<p>O encontro com o homem do outro lado do rio trouxe uma nova compreensão para a mensagem recebida quando A. Q. Ferracini tinha apenas três anos.</p>
+<p>Naquela época, Deus havia dito à sua mãe:</p>
+<p><strong>Deus:</strong> “Essa menina tem um propósito na música, mas o inimigo vai tentar impedir. Cuide bem dela.”</p>
+<p>Por quase trinta anos, A. Q. Ferracini não havia compreendido plenamente o que aquela mensagem significava.</p>
+<p>A música estava presente na promessa, mas o propósito ainda não estava claro.</p>
+<p>Foi ao conhecer o homem do outro lado do rio que ela começou a perceber uma possível ligação.</p>
+<p>Ele a ensinou a enxergar sentido na música. Por meio dos ensinamentos que recebeu dele, passou a compreender aspectos que antes não conseguia perceber da mesma maneira.</p>
+<p>O encontro, então, não representou apenas o reconhecimento de alguém que fazia parte de uma promessa antiga. Também abriu uma nova perspectiva sobre a música e sobre o significado daquela primeira mensagem.</p>
+<p>A. Q. Ferracini aprendeu muitas coisas com ele e ainda continua aprendendo.</p>
+<p>E, diante disso, surge uma pergunta que permanece aberta:</p>
+<p><strong>A. Q. Ferracini:</strong> “O encontro com ele era pela música, pelos ensinamentos que aprendi com ele. Mas e o resto da fala do anjo?”</p>
+<p>Ela ainda não sabe. Continua esperando com fé na promessa de Deus.</p>
+<p>O encontro foi importante e valioso pelo que já aconteceu. Ainda existem outros significados que só serão compreendidos com o passar da vida.</p>
+<p>Ela não pretende afirmar que conhece todo o propósito, nem antecipar respostas que ainda não recebeu.</p>
+<p>Há algo que já compreendeu: a mensagem sobre a música começou a fazer sentido.</p>
+<p>Mas o que mais esse encontro trará à sua vida?</p>
+<p>Descobriremos...</p>
+<p>Essa é uma questão que A. Q. Ferracini pretende atualizar conforme a vida passar, porque acredita que Deus tem o tempo certo para cada coisa.</p>
+
+<h2>A MISSÃO PARA O RESTO DO MUNDO</h2>
+
+<p>Depois de conhecer o homem do outro lado do rio e percorrer seis países da América do Sul, A. Q. Ferracini entrou em uma nova etapa de sua missão.</p>
+<p>Durante sua passagem pelo Chile, recebeu uma mensagem por meio de um homem, relacionada a uma oração que havia feito a Deus.</p>
+<p>Ela estava preocupada com o futuro de suas viagens missionárias e havia perguntado:</p>
+<p><strong>A. Q. Ferracini:</strong> “Deus, como vou fazer para continuar minha viagem missionária? Como vou conseguir dinheiro?”</p>
+<p>Então, por meio daquele homem, recebeu a seguinte mensagem:</p>
+<p><strong>Homem:</strong> “Deus te diz: Eu, o Senhor, vou prover o dinheiro assim que você voltar ao Brasil. Uma porta vai se abrir e você entrará por ela. Não se preocupe, filha, eu estarei com você.”</p>
+<p>Ao retornar ao Brasil, A. Q. Ferracini viu uma oportunidade surgir.</p>
+<p>Em uma semana, conseguiu um emprego com uma organização de trabalho que ocupa apenas quinze dias de cada mês. Dessa maneira, consegue trabalhar, descansar, desenvolver seus projetos e reunir recursos para a próxima missão.</p>
+<p>A nova etapa representa a preparação para sua terceira viagem missionária.</p>
+<p>A história continua em movimento. Os seis países já percorridos fazem parte de uma etapa concluída, mas o propósito de levar a mensagem do Evangelho a outros lugares permanece.</p>
+<p>Aos trinta e três anos, A. Q. Ferracini continua construindo projetos, trabalhando e se preparando para os próximos caminhos.</p>
+<p>E deixa uma frase que resume sua maneira de compreender essa jornada:</p>
+<p><strong>“O tempo é Deus, e a vida o acompanha.” — A. Q. Ferracini</strong></p>
+
+<hr class="trajectory-divider">
+
+<h1>DOZE PROJETOS, DOZE CAMINHOS E UMA VISÃO</h1>
+
+<p>Os projetos do Faith Expanse nasceram em momentos diferentes da trajetória de A. Q. Ferracini. Alguns surgiram na infância, outros durante os anos de sofrimento, outros a partir de sua formação, de sua missão ou dos encontros que marcaram sua vida.</p>
+<p>Cada um representa uma maneira de transformar uma experiência em algo que possa alcançar outras pessoas.</p>
+<p>Conheça os projetos:</p>
+
+<ol>
+<li><a href="https://anaferracini.github.io/faithexpanse/manga.html" target="_blank" rel="noopener noreferrer"><strong>Mangá — Treze Céus</strong></a></li>
+<li><a href="https://anaferracini.github.io/faithexpanse/amaxia.html" target="_blank" rel="noopener noreferrer"><strong>AMAXIA</strong></a></li>
+<li><a href="https://anaferracini.github.io/faithexpanse/literatura.html" target="_blank" rel="noopener noreferrer"><strong>Literatura</strong></a></li>
+<li><a href="https://anaferracini.github.io/faithexpanse/contrastride.html" target="_blank" rel="noopener noreferrer"><strong>ContraStride</strong></a></li>
+<li><a href="https://anaferracini.github.io/faithexpanse/entrelinhas.html" target="_blank" rel="noopener noreferrer"><strong>Entrelinhas</strong></a></li>
+<li><a href="https://anaferracini.github.io/faithexpanse/diario.html" target="_blank" rel="noopener noreferrer"><strong>Diário de uma Cristã</strong></a></li>
+<li><a href="https://anaferracini.github.io/faithexpanse/igreja.html" target="_blank" rel="noopener noreferrer"><strong>Igreja</strong></a></li>
+<li><a href="https://anaferracini.github.io/faithexpanse/jogo.html" target="_blank" rel="noopener noreferrer"><strong>Jogo</strong></a></li>
+<li><a href="https://anaferracini.github.io/faithexpanse/arte.html" target="_blank" rel="noopener noreferrer"><strong>Arte e Poesias</strong></a></li>
+<li><a href="https://anaferracini.github.io/faithexpanse/missoes.html" target="_blank" rel="noopener noreferrer"><strong>Missões pelo Mundo</strong></a></li>
+<li><a href="https://anaferracini.github.io/faithexpanse/historia.html" target="_blank" rel="noopener noreferrer"><strong>Jardim Secreto</strong></a></li>
+<li><a href="https://anaferracini.github.io/faithexpanse/amelpia.html" target="_blank" rel="noopener noreferrer"><strong>AmelpIA</strong></a></li>
+</ol>
+
+<p>Doze projetos, doze caminhos na Terra e uma esperança que aponta para o céu.</p>
+<p>O Faith Expanse reúne essas iniciativas sob uma mesma visão: expandir a fé em Deus, em você e no próximo.</p>
+
+<h2>UMA HISTÓRIA QUE AINDA ESTÁ SENDO ESCRITA</h2>
+
+<p>A trajetória de A. Q. Ferracini não termina no encontro aos trinta e dois anos, nem na criação dos doze projetos.</p>
+<p>Ela ainda não sabe por que deveria conhecer aquele homem, nem quais outros acontecimentos surgirão dessa relação e dos ensinamentos que recebeu.</p>
+<p>O que sabe é que aprendeu a enxergar sentido na música de uma maneira que antes não compreendia.</p>
+<p>Também reconhece a sequência de acontecimentos que, em sua fé, se conectam às mensagens recebidas ao longo da vida: a promessa sobre a música, o homem que vivia longe, o rio, o anúncio do começo do mês, a recuperação, a missão para além do Brasil e os projetos que nasceram de suas experiências.</p>
+<p>Mas não pretende encerrar a história com uma explicação definitiva.</p>
+<p>A vida continua, os aprendizados continuam e o significado dos encontros poderá ganhar novas dimensões.</p>
+<p>Por isso, esta trajetória será atualizada conforme os próximos capítulos acontecerem.</p>
+<p>A. Q. Ferracini ainda não sabe o que mais Deus reserva para essa história.</p>
+<p>E não precisa saber tudo agora.</p>
+<p><strong>Porque Deus tem o tempo para tudo.</strong></p>
+<p><strong>“O tempo é Deus, e a vida o acompanha.” — A. Q. Ferracini</strong></p>
+<p><strong>Faith Expanse — Expandindo a fé em Deus, em você e no próximo.</strong></p>
+
+</article>
+
+<div class="trajectory-footer-note">
+  <p><strong>FAITH EXPANSE · Expandindo a fé em Deus, em você e no próximo.</strong></p>
+  <p>Impossívia, o impossível tem uma via.</p>
+</div>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    Faith Expanse<br>
+    Expandindo a fé em Deus, em você e no próximo.
+  </div>
+</footer>
+
+<script>
+(function(){
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  var box = document.querySelector('.petals');
+  if (!box) return;
+
+  var count = window.innerWidth < 700 ? 14 : 26;
+
+  for (var i = 0; i < count; i++) {
+    var p = document.createElement('span');
+    p.className = 'petal';
+
+    var size = 8 + Math.random() * 10;
+
+    p.style.left = (Math.random() * 100) + 'vw';
+    p.style.width = size + 'px';
+    p.style.height = (size * 0.8) + 'px';
+
+    p.style.animationDuration =
+      (12 + Math.random() * 14) + 's, ' +
+      (3 + Math.random() * 4) + 's';
+
+    p.style.animationDelay =
+      (-Math.random() * 26) + 's, ' +
+      (-Math.random() * 4) + 's';
+
+    p.style.opacity = (0.35 + Math.random() * 0.5).toFixed(2);
+
+    box.appendChild(p);
+  }
+})();
+</script>
+
+</body>
+</html>
